@@ -10,9 +10,28 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *unitNumberLabel;
+
 @end
 
 @implementation ViewController
+
+
+- (IBAction)maintenanceButton:(id)sender {
+    
+}
+
+
+- (IBAction)noiseComplaintButton:(id)sender {
+    
+}
+
+
+- (IBAction)generalMessageButton:(id)sender {
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
