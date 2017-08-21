@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // App ID 1166alberni
+    // Master Key: myMasterKey
+    // https://landlord-tenant.herokuapp.com/parse
     return YES;
 }
 
