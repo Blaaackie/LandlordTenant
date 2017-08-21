@@ -1,14 +1,14 @@
 //
-//  LandlordTableViewCell.m
+//  UnitTableViewCell.m
 //  LandlordTenant
 //
 //  Created by Elle Ti on 2017-08-21.
 //  Copyright © 2017 Tye Blackie. All rights reserved.
 //
 
-#import "LandlordTableViewCell.h"
+#import "UnitTableViewCell.h"
 
-@implementation LandlordTableViewCell
+@implementation UnitTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

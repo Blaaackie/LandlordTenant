@@ -1,20 +1,21 @@
 //
-//  Landlord.m
+//  Unit.m
 //  LandlordTenant
 //
 //  Created by Elle Ti on 2017-08-21.
 //  Copyright © 2017 Tye Blackie. All rights reserved.
 //
 
-#import "Landlord.h"
+#import "Unit.h"
 
-@implementation Landlord
+@implementation Unit
 
-- (instancetype)initWithname:(NSString *)landlordName
+- (instancetype)initWithUnitNumber:(int)unitNumber isVacant:(BOOL)isVacant
 {
     if (self = [super init])
     {
-        _landlordName = landlordName;
+        _unitNumber = unitNumber;
+        _isVacant = isVacant;
     }
     return self;
 }

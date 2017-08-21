@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Landlord : NSObject
+@property (nonatomic, strong) NSString *landlordName;
+
+- (instancetype)initWithname:(NSString *)landlordName;
 
 @end

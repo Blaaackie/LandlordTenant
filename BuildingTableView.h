@@ -1,5 +1,5 @@
 //
-//  LandlordTableViewCell.h
+//  BuildingTableView.h
 //  LandlordTenant
 //
 //  Created by Elle Ti on 2017-08-21.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LandlordTableViewCell : UITableViewCell
+@interface BuildingTableView : UITableView
 
 @end

@@ -7,14 +7,15 @@
 //
 
 #import "LandlordViewController.h"
+#import "Landlord.h"
+#import "Unit.h"
+#import "UnitTableViewCell.h"
 
 @interface LandlordViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *landlordTableView;
-
-
 @property (nonatomic, strong) NSArray *propertyArray;
-
+@property (weak, nonatomic) IBOutlet UILabel *landlordNameLabel;
 
 @end
 
@@ -22,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self initialSetup];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +33,13 @@
 
 - (void)initialSetup
 {
-    self.propertyArray = @[@"Test 1", @"Test 2"];
+    Landlord *landlord1 = [[Landlord alloc] initWithname:@"Bill"];
+    
+    Unit *unit100 = [[Unit alloc] initWithUnitNumber:100 isVacant:NO];
+    
+    self.propertyArray = @[unit100];
+    self.landlordNameLabel.text = [NSString stringWithFormat:@"%@", landlord1];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -43,7 +50,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LandlordCell"];
+    UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UnitCell"];
     
     return cell;
 }
