@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Tenant.h"
 
 @interface ViewController ()
 
@@ -33,9 +34,22 @@
     
 }
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+  Tenant *tenant = [[Tenant alloc] initWithName:@"Tye Blackie"
+                                    phoneNumber:@"403.680.9430"
+                                     unitNumber:@"Unit 205"];
+    
+    self.nameLabel.text = tenant.name;
+    self.phoneNumberLabel.text = tenant.phoneNumber;
+    self.unitNumberLabel.text = tenant.unitNumber;
+    
+    
 }
 
 
