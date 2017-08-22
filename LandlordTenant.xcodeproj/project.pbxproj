@@ -18,6 +18,7 @@
 		68473F231F4BB61000AA3C22 /* TenantComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F221F4BB61000AA3C22 /* TenantComplaintViewController.m */; };
 		68473F261F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */; };
 		68473F291F4BC41600AA3C22 /* TenantComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F281F4BC41600AA3C22 /* TenantComplaint.m */; };
+		68473F2D1F4CE79E00AA3C22 /* ComplaintHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F2C1F4CE79E00AA3C22 /* ComplaintHandler.m */; };
 		7790E3041C848961DFFCA8A4 /* Pods_LandlordTenant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12437500CB05EB683D49844B /* Pods_LandlordTenant.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintDetailViewController.m; sourceTree = "<group>"; };
 		68473F271F4BC41600AA3C22 /* TenantComplaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaint.h; sourceTree = "<group>"; };
 		68473F281F4BC41600AA3C22 /* TenantComplaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaint.m; sourceTree = "<group>"; };
+		68473F2B1F4CE79E00AA3C22 /* ComplaintHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintHandler.h; sourceTree = "<group>"; };
+		68473F2C1F4CE79E00AA3C22 /* ComplaintHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		68473F2A1F4CB74E00AA3C22 /* Tenant */ = {
 			isa = PBXGroup;
 			children = (
+				68473F2B1F4CE79E00AA3C22 /* ComplaintHandler.h */,
+				68473F2C1F4CE79E00AA3C22 /* ComplaintHandler.m */,
 				68473F1B1F4B994600AA3C22 /* Tenant.h */,
 				68473F1C1F4B994600AA3C22 /* Tenant.m */,
 				68473F271F4BC41600AA3C22 /* TenantComplaint.h */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68473F2D1F4CE79E00AA3C22 /* ComplaintHandler.m in Sources */,
 				68473F091F4B82DD00AA3C22 /* TenantViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
 				68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */,
@@ -430,6 +436,7 @@
 				68473F1A1F4B82DD00AA3C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
