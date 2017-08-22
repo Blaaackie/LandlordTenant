@@ -9,9 +9,10 @@
 #import "LandlordViewController.h"
 #import "Landlord.h"
 #import "Unit.h"
+#import "UnitViewController.h"
 #import "UnitTableViewCell.h"
 
-@interface LandlordViewController () <UITableViewDataSource>
+@interface LandlordViewController () <UITableViewDataSource, UITableViewDelegate, UnitViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *landlordTableView;
 @property (weak, nonatomic) IBOutlet UILabel *landlordNameLabel;
@@ -26,9 +27,13 @@
     [self propertySetup];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:true];
+    
+    
 }
 
 #pragma mark - Initial Setup
@@ -88,14 +93,36 @@
     return cell;
 }
 
-/*
+#pragma mark = Landlord Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toUnitTableView" sender:[self.landlordTableView cellForRowAtIndexPath:indexPath]];
+    
+    
+}
+
+
+- (void)setLabelWithText:(NSString *)textLabel
+{
+    
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toUnitTableView"])
+    {
+        UnitTableViewCell *cell = (UnitTableViewCell *)sender;
+        NSIndexPath *selectedIndexPath = [self.landlordTableView indexPathForCell:cell];
+        
+        Unit *unit =  (Unit *) [self.buildings objectAtIndex:selectedIndexPath.item];
+        UnitViewController *unitVC = [segue destinationViewController];
+        unitVC.unit = unit;
+    }
 }
-*/
+ 
 
 @end
