@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Unit.h"
 
 @interface UnitTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
+
+- (void)configureCellWithUnit:(Unit *)unit;
 
 @end

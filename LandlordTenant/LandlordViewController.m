@@ -14,7 +14,7 @@
 @interface LandlordViewController () <UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *landlordTableView;
-@property (nonatomic, strong) NSArray *propertyArray;
+@property (nonatomic, strong) NSMutableArray *propertyArray;
 @property (weak, nonatomic) IBOutlet UILabel *landlordNameLabel;
 
 @end
@@ -34,12 +34,21 @@
 - (void)initialSetup
 {
     Landlord *landlord1 = [[Landlord alloc] initWithname:@"Bill"];
+
+    self.landlordNameLabel.text = [NSString stringWithFormat:@"%@", landlord1.landlordName];
     
+    
+    
+    [self unitInformation];
+    
+}
+
+- (void)unitInformation
+{
     Unit *unit100 = [[Unit alloc] initWithUnitNumber:100 isVacant:NO];
+    Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 isVacant:YES];
     
-    self.propertyArray = @[unit100];
-    self.landlordNameLabel.text = [NSString stringWithFormat:@"%@", landlord1];
-    
+    self.propertyArray = [@[unit100, unit201] mutableCopy];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -50,7 +59,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UnitCell"];
+    UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UnitCell" forIndexPath:indexPath];
+    
+    Unit *unitObject = self.propertyArray[indexPath.row];
+    [cell configureCellWithUnit:unitObject];
     
     return cell;
 }

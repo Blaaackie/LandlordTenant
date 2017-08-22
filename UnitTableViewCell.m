@@ -21,4 +21,9 @@
     // Configure the view for the selected state
 }
 
+- (void)configureCellWithUnit:(Unit *)unit
+{
+    self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - <Tenant Name>", unit.unitNumber];
+}
+
 @end
