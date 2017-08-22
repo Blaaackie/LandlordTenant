@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     
-//    self.title = [NSString stringWithFormat:@"%d", self.unit.unitNumber]; // For Header of Unit Table View
+//    self.title = [NSString stringWithFormat:@"%@", self.unit]; // For Header of Unit Table View
 }
 
 - (void)didReceiveMemoryWarning {

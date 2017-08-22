@@ -98,8 +98,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"toUnitTableView" sender:[self.landlordTableView cellForRowAtIndexPath:indexPath]];
-    
-    
 }
 
 
@@ -121,6 +119,9 @@
         Unit *unit =  (Unit *) [self.buildings objectAtIndex:selectedIndexPath.item];
         UnitViewController *unitVC = [segue destinationViewController];
         unitVC.unit = unit;
+        
+        cell = [self.landlordTableView cellForRowAtIndexPath:self.landlordTableView.indexPathForSelectedRow];
+        unitVC.title = cell.textLabel.text;
     }
 }
  
