@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49CBF3BBF7CC5D45E3D9C58F /* Pods_LandlordTenant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB9D24B17DB9C4E33DB3372 /* Pods_LandlordTenant.framework */; };
 		6831CF881F4CF32800B897D1 /* ComplaintHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF871F4CF32800B897D1 /* ComplaintHandler.m */; };
 		6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8A1F4CF34C00B897D1 /* Tenant.m */; };
 		6831CF941F4CF34C00B897D1 /* TenantComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8C1F4CF34C00B897D1 /* TenantComplaint.m */; };
 		6831CF951F4CF34C00B897D1 /* TenantComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */; };
 		6831CF961F4CF34C00B897D1 /* TenantComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */; };
-		6831CF971F4CF34C00B897D1 /* TenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF921F4CF34C00B897D1 /* TenantViewController.m */; };
+		6831CFA11F4CF6C300B897D1 /* TenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CFA01F4CF6C300B897D1 /* TenantViewController.m */; };
 		68473F031F4B82DC00AA3C22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F021F4B82DC00AA3C22 /* main.m */; };
 		68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F051F4B82DC00AA3C22 /* AppDelegate.m */; };
-		68473F091F4B82DD00AA3C22 /* TenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F081F4B82DD00AA3C22 /* TenantViewController.m */; };
 		68473F0C1F4B82DD00AA3C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68473F0A1F4B82DD00AA3C22 /* Main.storyboard */; };
 		68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68473F0D1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld */; };
 		68473F111F4B82DD00AA3C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68473F101F4B82DD00AA3C22 /* Assets.xcassets */; };
@@ -43,13 +43,12 @@
 		6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintDetailViewController.m; sourceTree = "<group>"; };
 		6831CF8F1F4CF34C00B897D1 /* TenantComplaintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaintViewController.h; sourceTree = "<group>"; };
 		6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintViewController.m; sourceTree = "<group>"; };
-		6831CF911F4CF34C00B897D1 /* TenantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantViewController.h; sourceTree = "<group>"; };
-		6831CF921F4CF34C00B897D1 /* TenantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantViewController.m; sourceTree = "<group>"; };
+		6831CF9F1F4CF6C300B897D1 /* TenantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantViewController.h; sourceTree = "<group>"; };
+		6831CFA01F4CF6C300B897D1 /* TenantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantViewController.m; sourceTree = "<group>"; };
 		68473EFE1F4B82DC00AA3C22 /* LandlordTenant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandlordTenant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68473F021F4B82DC00AA3C22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68473F041F4B82DC00AA3C22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68473F051F4B82DC00AA3C22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68473F081F4B82DD00AA3C22 /* TenantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenantViewController.m; sourceTree = "<group>"; };
 		68473F0B1F4B82DD00AA3C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68473F0E1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LandlordTenant.xcdatamodel; sourceTree = "<group>"; };
 		68473F101F4B82DD00AA3C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		6AF95CF91F4B9BD700429692 /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unit.m; sourceTree = "<group>"; };
 		6AF95CFB1F4BC28B00429692 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
 		6AF95CFC1F4BC28B00429692 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
+		8BB9D24B17DB9C4E33DB3372 /* Pods_LandlordTenant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandlordTenant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +77,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CBF3BBF7CC5D45E3D9C58F /* Pods_LandlordTenant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521416EAC6E757E462757A27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BB9D24B17DB9C4E33DB3372 /* Pods_LandlordTenant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63FF948384A5FF2C0019EF66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +112,6 @@
 				6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */,
 				6831CF8F1F4CF34C00B897D1 /* TenantComplaintViewController.h */,
 				6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */,
-				6831CF911F4CF34C00B897D1 /* TenantViewController.h */,
-				6831CF921F4CF34C00B897D1 /* TenantViewController.m */,
 				68473F0A1F4B82DD00AA3C22 /* Main.storyboard */,
 			);
 			name = Tenant;
@@ -125,6 +132,7 @@
 				68473F001F4B82DC00AA3C22 /* LandlordTenant */,
 				68473EFF1F4B82DC00AA3C22 /* Products */,
 				63FF948384A5FF2C0019EF66 /* Pods */,
+				521416EAC6E757E462757A27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +147,8 @@
 		68473F001F4B82DC00AA3C22 /* LandlordTenant */ = {
 			isa = PBXGroup;
 			children = (
+				6831CF9F1F4CF6C300B897D1 /* TenantViewController.h */,
+				6831CFA01F4CF6C300B897D1 /* TenantViewController.m */,
 				68473F041F4B82DC00AA3C22 /* AppDelegate.h */,
 				68473F051F4B82DC00AA3C22 /* AppDelegate.m */,
 				6831CF9B1F4CF3C600B897D1 /* Complaint Handler */,
@@ -336,8 +346,7 @@
 				6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */,
 				6AF95CEC1F4B922400429692 /* LandlordViewController.m in Sources */,
 				6AF95CE41F4B900F00429692 /* Landlord.m in Sources */,
-				6831CF971F4CF34C00B897D1 /* TenantViewController.m in Sources */,
-				68473F091F4B82DD00AA3C22 /* TenantViewController.m in Sources */,
+				6831CFA11F4CF6C300B897D1 /* TenantViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
 				6831CF881F4CF32800B897D1 /* ComplaintHandler.m in Sources */,
 				6A069DD61F4CEF56006B16AC /* UnitTableViewCell.m in Sources */,
@@ -467,6 +476,10 @@
 			baseConfigurationReference = 1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = LandlordTenant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeblackie.LandlordTenant;
@@ -479,6 +492,10 @@
 			baseConfigurationReference = 467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = LandlordTenant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeblackie.LandlordTenant;
