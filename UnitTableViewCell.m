@@ -25,7 +25,9 @@
 {
     if (unit.isVacant)
     {
-        self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - Vacant", unit.unitNumber];
+//        self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - Vacant", unit.unitNumber];
+        NSString *vacantUnit = [NSString stringWithFormat:@"Unit %d - Vacant", unit.unitNumber];
+        self.unitLabel.attributedText = [[NSAttributedString alloc] initWithString:vacantUnit attributes:@{NSFontAttributeName: [UIFont italicSystemFontOfSize:[UIFont systemFontSize]]}];
     }
     else
     {

@@ -123,12 +123,20 @@
 				6AF95CF41F4B966F00429692 /* BuildingTableView.m */,
 				6AF95CFB1F4BC28B00429692 /* Building.h */,
 				6AF95CFC1F4BC28B00429692 /* Building.m */,
+				6AF95CFE1F4BC9EB00429692 /* Unit */,
+			);
+			name = Building;
+			sourceTree = "<group>";
+		};
+		6AF95CFE1F4BC9EB00429692 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
 				6AF95CED1F4B960100429692 /* UnitTableViewCell.h */,
 				6AF95CEE1F4B960100429692 /* UnitTableViewCell.m */,
 				6AF95CF81F4B9BD700429692 /* Unit.h */,
 				6AF95CF91F4B9BD700429692 /* Unit.m */,
 			);
-			name = Building;
+			name = Unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

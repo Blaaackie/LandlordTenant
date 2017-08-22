@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initialSetup];
+    [self propertySetup];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,13 +31,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Landlord Setup
+#pragma mark - Initial Setup
 
-- (void)initialSetup
+- (void)propertySetup
 {
-    Landlord *landlord1 = [[Landlord alloc] initWithname:@"Bill"];
+    Landlord *landlord = [[Landlord alloc] initWithname:@"Bill"];
 
-    self.landlordNameLabel.text = [NSString stringWithFormat:@"%@", landlord1.landlordName];
+    self.landlordNameLabel.text = [NSString stringWithFormat:@"%@", landlord.landlordName];
     
     [self unitInformation];
     
@@ -64,7 +64,6 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-
     Building *building = self.buildings[section];
     return building.name;
 }
