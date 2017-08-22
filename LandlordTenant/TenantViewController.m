@@ -6,22 +6,24 @@
 //  Copyright © 2017 Tye Blackie. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TenantViewController.h"
 #import "Tenant.h"
 
-@interface ViewController ()
+@interface TenantViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *unitNumberLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *addRequestButton;
+
+
 @end
 
-@implementation ViewController
+@implementation TenantViewController
 
 - (IBAction)AddRequestButton:(id)sender {
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];

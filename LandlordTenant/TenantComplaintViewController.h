@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TenantComplaintViewController.h
 //  LandlordTenant
 //
 //  Created by Tye Blackie on 2017-08-21.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TenantComplaintViewController : UIViewController
 
 @end
-

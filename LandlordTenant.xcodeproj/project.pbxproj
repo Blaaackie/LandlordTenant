@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		68473F031F4B82DC00AA3C22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F021F4B82DC00AA3C22 /* main.m */; };
 		68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F051F4B82DC00AA3C22 /* AppDelegate.m */; };
-		68473F091F4B82DD00AA3C22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F081F4B82DD00AA3C22 /* ViewController.m */; };
+		68473F091F4B82DD00AA3C22 /* TenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F081F4B82DD00AA3C22 /* TenantViewController.m */; };
 		68473F0C1F4B82DD00AA3C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68473F0A1F4B82DD00AA3C22 /* Main.storyboard */; };
 		68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68473F0D1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld */; };
 		68473F111F4B82DD00AA3C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68473F101F4B82DD00AA3C22 /* Assets.xcassets */; };
 		68473F141F4B82DD00AA3C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68473F121F4B82DD00AA3C22 /* LaunchScreen.storyboard */; };
 		68473F1D1F4B994600AA3C22 /* Tenant.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F1C1F4B994600AA3C22 /* Tenant.m */; };
-		68473F201F4BA9EC00AA3C22 /* tenantComplaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F1F1F4BA9EC00AA3C22 /* tenantComplaintCell.m */; };
+		68473F231F4BB61000AA3C22 /* TenantComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F221F4BB61000AA3C22 /* TenantComplaintViewController.m */; };
+		68473F261F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */; };
+		68473F291F4BC41600AA3C22 /* TenantComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F281F4BC41600AA3C22 /* TenantComplaint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +25,8 @@
 		68473F021F4B82DC00AA3C22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68473F041F4B82DC00AA3C22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68473F051F4B82DC00AA3C22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68473F071F4B82DD00AA3C22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		68473F081F4B82DD00AA3C22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		68473F071F4B82DD00AA3C22 /* TenantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TenantViewController.h; sourceTree = "<group>"; };
+		68473F081F4B82DD00AA3C22 /* TenantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TenantViewController.m; sourceTree = "<group>"; };
 		68473F0B1F4B82DD00AA3C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68473F0E1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LandlordTenant.xcdatamodel; sourceTree = "<group>"; };
 		68473F101F4B82DD00AA3C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,8 +34,12 @@
 		68473F151F4B82DD00AA3C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68473F1B1F4B994600AA3C22 /* Tenant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tenant.h; sourceTree = "<group>"; };
 		68473F1C1F4B994600AA3C22 /* Tenant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tenant.m; sourceTree = "<group>"; };
-		68473F1E1F4BA9EC00AA3C22 /* tenantComplaintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tenantComplaintCell.h; sourceTree = "<group>"; };
-		68473F1F1F4BA9EC00AA3C22 /* tenantComplaintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tenantComplaintCell.m; sourceTree = "<group>"; };
+		68473F211F4BB61000AA3C22 /* TenantComplaintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaintViewController.h; sourceTree = "<group>"; };
+		68473F221F4BB61000AA3C22 /* TenantComplaintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintViewController.m; sourceTree = "<group>"; };
+		68473F241F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaintDetailViewController.h; sourceTree = "<group>"; };
+		68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintDetailViewController.m; sourceTree = "<group>"; };
+		68473F271F4BC41600AA3C22 /* TenantComplaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaint.h; sourceTree = "<group>"; };
+		68473F281F4BC41600AA3C22 /* TenantComplaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +74,16 @@
 			children = (
 				68473F041F4B82DC00AA3C22 /* AppDelegate.h */,
 				68473F051F4B82DC00AA3C22 /* AppDelegate.m */,
-				68473F1E1F4BA9EC00AA3C22 /* tenantComplaintCell.h */,
-				68473F1F1F4BA9EC00AA3C22 /* tenantComplaintCell.m */,
 				68473F1B1F4B994600AA3C22 /* Tenant.h */,
 				68473F1C1F4B994600AA3C22 /* Tenant.m */,
-				68473F071F4B82DD00AA3C22 /* ViewController.h */,
-				68473F081F4B82DD00AA3C22 /* ViewController.m */,
+				68473F271F4BC41600AA3C22 /* TenantComplaint.h */,
+				68473F281F4BC41600AA3C22 /* TenantComplaint.m */,
+				68473F241F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.h */,
+				68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */,
+				68473F211F4BB61000AA3C22 /* TenantComplaintViewController.h */,
+				68473F221F4BB61000AA3C22 /* TenantComplaintViewController.m */,
+				68473F071F4B82DD00AA3C22 /* TenantViewController.h */,
+				68473F081F4B82DD00AA3C22 /* TenantViewController.m */,
 				68473F0A1F4B82DD00AA3C22 /* Main.storyboard */,
 				68473F101F4B82DD00AA3C22 /* Assets.xcassets */,
 				68473F121F4B82DD00AA3C22 /* LaunchScreen.storyboard */,
@@ -163,11 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68473F091F4B82DD00AA3C22 /* ViewController.m in Sources */,
+				68473F091F4B82DD00AA3C22 /* TenantViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
 				68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */,
-				68473F201F4BA9EC00AA3C22 /* tenantComplaintCell.m in Sources */,
+				68473F261F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m in Sources */,
 				68473F031F4B82DC00AA3C22 /* main.m in Sources */,
+				68473F291F4BC41600AA3C22 /* TenantComplaint.m in Sources */,
+				68473F231F4BB61000AA3C22 /* TenantComplaintViewController.m in Sources */,
 				68473F1D1F4B994600AA3C22 /* Tenant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
