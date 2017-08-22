@@ -15,6 +15,7 @@
 		68473F111F4B82DD00AA3C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68473F101F4B82DD00AA3C22 /* Assets.xcassets */; };
 		68473F141F4B82DD00AA3C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68473F121F4B82DD00AA3C22 /* LaunchScreen.storyboard */; };
 		68473F1D1F4B994600AA3C22 /* Tenant.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F1C1F4B994600AA3C22 /* Tenant.m */; };
+		68473F201F4BA9EC00AA3C22 /* tenantComplaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F1F1F4BA9EC00AA3C22 /* tenantComplaintCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		68473F151F4B82DD00AA3C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68473F1B1F4B994600AA3C22 /* Tenant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tenant.h; sourceTree = "<group>"; };
 		68473F1C1F4B994600AA3C22 /* Tenant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tenant.m; sourceTree = "<group>"; };
+		68473F1E1F4BA9EC00AA3C22 /* tenantComplaintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tenantComplaintCell.h; sourceTree = "<group>"; };
+		68473F1F1F4BA9EC00AA3C22 /* tenantComplaintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tenantComplaintCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 			children = (
 				68473F041F4B82DC00AA3C22 /* AppDelegate.h */,
 				68473F051F4B82DC00AA3C22 /* AppDelegate.m */,
+				68473F1E1F4BA9EC00AA3C22 /* tenantComplaintCell.h */,
+				68473F1F1F4BA9EC00AA3C22 /* tenantComplaintCell.m */,
 				68473F1B1F4B994600AA3C22 /* Tenant.h */,
 				68473F1C1F4B994600AA3C22 /* Tenant.m */,
 				68473F071F4B82DD00AA3C22 /* ViewController.h */,
@@ -161,6 +166,7 @@
 				68473F091F4B82DD00AA3C22 /* ViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
 				68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */,
+				68473F201F4BA9EC00AA3C22 /* tenantComplaintCell.m in Sources */,
 				68473F031F4B82DC00AA3C22 /* main.m in Sources */,
 				68473F1D1F4B994600AA3C22 /* Tenant.m in Sources */,
 			);

@@ -19,22 +19,8 @@
 
 @implementation ViewController
 
-
-- (IBAction)maintenanceButton:(id)sender {
-    
+- (IBAction)AddRequestButton:(id)sender {
 }
-
-
-- (IBAction)noiseComplaintButton:(id)sender {
-    
-}
-
-
-- (IBAction)generalMessageButton:(id)sender {
-    
-}
-
-
 
 
 - (void)viewDidLoad {
