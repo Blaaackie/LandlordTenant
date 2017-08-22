@@ -20,6 +20,7 @@
 		6AF95CEF1F4B960100429692 /* UnitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF95CEE1F4B960100429692 /* UnitTableViewCell.m */; };
 		6AF95CF51F4B966F00429692 /* BuildingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF95CF41F4B966F00429692 /* BuildingTableView.m */; };
 		6AF95CFA1F4B9BD700429692 /* Unit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF95CF91F4B9BD700429692 /* Unit.m */; };
+		6AF95CFD1F4BC28B00429692 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF95CFC1F4BC28B00429692 /* Building.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		6AF95CF41F4B966F00429692 /* BuildingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuildingTableView.m; path = ../BuildingTableView.m; sourceTree = "<group>"; };
 		6AF95CF81F4B9BD700429692 /* Unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unit.h; sourceTree = "<group>"; };
 		6AF95CF91F4B9BD700429692 /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unit.m; sourceTree = "<group>"; };
+		6AF95CFB1F4BC28B00429692 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
+		6AF95CFC1F4BC28B00429692 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 			children = (
 				6AF95CF31F4B966F00429692 /* BuildingTableView.h */,
 				6AF95CF41F4B966F00429692 /* BuildingTableView.m */,
+				6AF95CFB1F4BC28B00429692 /* Building.h */,
+				6AF95CFC1F4BC28B00429692 /* Building.m */,
 				6AF95CED1F4B960100429692 /* UnitTableViewCell.h */,
 				6AF95CEE1F4B960100429692 /* UnitTableViewCell.m */,
 				6AF95CF81F4B9BD700429692 /* Unit.h */,
@@ -203,6 +208,7 @@
 				6AF95CE41F4B900F00429692 /* Landlord.m in Sources */,
 				68473F091F4B82DD00AA3C22 /* ViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
+				6AF95CFD1F4BC28B00429692 /* Building.m in Sources */,
 				68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */,
 				68473F031F4B82DC00AA3C22 /* main.m in Sources */,
 				6AF95CEF1F4B960100429692 /* UnitTableViewCell.m in Sources */,

@@ -23,7 +23,14 @@
 
 - (void)configureCellWithUnit:(Unit *)unit
 {
-    self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - <Tenant Name>", unit.unitNumber];
+    if (unit.isVacant)
+    {
+        self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - Vacant", unit.unitNumber];
+    }
+    else
+    {
+        self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - <Insert Tenant Name>", unit.unitNumber];
+    }
 }
 
 @end

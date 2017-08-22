@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Building.h"
 
 @interface Unit : NSObject
 @property (nonatomic, assign) int unitNumber;
