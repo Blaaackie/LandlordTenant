@@ -11,4 +11,17 @@
 @implementation TenantComplaint
 
 
+
+
+- (instancetype)initWithType:(ComplaintType)type date:(NSDate*)date description:(NSString*)complaintDescription
+{
+    self = [super init];
+    if (self) {
+        _type = type;
+        _date = date;
+        _complaintDescription = complaintDescription;
+    }
+    return self;
+}
+
 @end

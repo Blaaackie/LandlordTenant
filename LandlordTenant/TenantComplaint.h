@@ -18,9 +18,9 @@ typedef NS_ENUM(NSUInteger, ComplaintType) {
 
 //@property (nonatomic, strong) enum complaintType;
 @property (nonatomic, strong) NSString* complaintDescription;
+@property (nonatomic, strong) NSDate* date;
+@property (nonatomic, assign) ComplaintType type;
 
-
-
-
+- (instancetype)initWithType:(ComplaintType)type date:(NSDate*)date description:(NSString*)complaintDescription;
 
 @end

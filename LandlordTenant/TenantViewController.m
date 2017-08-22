@@ -8,6 +8,7 @@
 
 #import "TenantViewController.h"
 #import "Tenant.h"
+#import "TenantComplaint.h"
 
 @interface TenantViewController ()
 
@@ -23,6 +24,8 @@
 @implementation TenantViewController
 
 - (IBAction)AddRequestButton:(id)sender {
+    
+    
 }
 
 - (void)viewDidLoad {

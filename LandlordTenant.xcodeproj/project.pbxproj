@@ -18,9 +18,13 @@
 		68473F231F4BB61000AA3C22 /* TenantComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F221F4BB61000AA3C22 /* TenantComplaintViewController.m */; };
 		68473F261F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */; };
 		68473F291F4BC41600AA3C22 /* TenantComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F281F4BC41600AA3C22 /* TenantComplaint.m */; };
+		7790E3041C848961DFFCA8A4 /* Pods_LandlordTenant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12437500CB05EB683D49844B /* Pods_LandlordTenant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12437500CB05EB683D49844B /* Pods_LandlordTenant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandlordTenant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandlordTenant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant.debug.xcconfig"; sourceTree = "<group>"; };
+		467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandlordTenant.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant.release.xcconfig"; sourceTree = "<group>"; };
 		68473EFE1F4B82DC00AA3C22 /* LandlordTenant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandlordTenant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68473F021F4B82DC00AA3C22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68473F041F4B82DC00AA3C22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7790E3041C848961DFFCA8A4 /* Pods_LandlordTenant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63FF948384A5FF2C0019EF66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */,
+				467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		68473EF51F4B82DC00AA3C22 = {
 			isa = PBXGroup;
 			children = (
 				68473F001F4B82DC00AA3C22 /* LandlordTenant */,
 				68473EFF1F4B82DC00AA3C22 /* Products */,
+				63FF948384A5FF2C0019EF66 /* Pods */,
+				8EB43A306F96A83082C8BC05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,16 +90,7 @@
 			children = (
 				68473F041F4B82DC00AA3C22 /* AppDelegate.h */,
 				68473F051F4B82DC00AA3C22 /* AppDelegate.m */,
-				68473F1B1F4B994600AA3C22 /* Tenant.h */,
-				68473F1C1F4B994600AA3C22 /* Tenant.m */,
-				68473F271F4BC41600AA3C22 /* TenantComplaint.h */,
-				68473F281F4BC41600AA3C22 /* TenantComplaint.m */,
-				68473F241F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.h */,
-				68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */,
-				68473F211F4BB61000AA3C22 /* TenantComplaintViewController.h */,
-				68473F221F4BB61000AA3C22 /* TenantComplaintViewController.m */,
-				68473F071F4B82DD00AA3C22 /* TenantViewController.h */,
-				68473F081F4B82DD00AA3C22 /* TenantViewController.m */,
+				68473F2A1F4CB74E00AA3C22 /* Tenant */,
 				68473F0A1F4B82DD00AA3C22 /* Main.storyboard */,
 				68473F101F4B82DD00AA3C22 /* Assets.xcassets */,
 				68473F121F4B82DD00AA3C22 /* LaunchScreen.storyboard */,
@@ -102,6 +109,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		68473F2A1F4CB74E00AA3C22 /* Tenant */ = {
+			isa = PBXGroup;
+			children = (
+				68473F1B1F4B994600AA3C22 /* Tenant.h */,
+				68473F1C1F4B994600AA3C22 /* Tenant.m */,
+				68473F271F4BC41600AA3C22 /* TenantComplaint.h */,
+				68473F281F4BC41600AA3C22 /* TenantComplaint.m */,
+				68473F241F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.h */,
+				68473F251F4BBD4F00AA3C22 /* TenantComplaintDetailViewController.m */,
+				68473F211F4BB61000AA3C22 /* TenantComplaintViewController.h */,
+				68473F221F4BB61000AA3C22 /* TenantComplaintViewController.m */,
+				68473F071F4B82DD00AA3C22 /* TenantViewController.h */,
+				68473F081F4B82DD00AA3C22 /* TenantViewController.m */,
+			);
+			name = Tenant;
+			sourceTree = "<group>";
+		};
+		8EB43A306F96A83082C8BC05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12437500CB05EB683D49844B /* Pods_LandlordTenant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68473F181F4B82DD00AA3C22 /* Build configuration list for PBXNativeTarget "LandlordTenant" */;
 			buildPhases = (
+				75A92F5540927A54A496CE6D /* [CP] Check Pods Manifest.lock */,
 				68473EFA1F4B82DC00AA3C22 /* Sources */,
 				68473EFB1F4B82DC00AA3C22 /* Frameworks */,
 				68473EFC1F4B82DC00AA3C22 /* Resources */,
+				87342F50F81E39D0E0B04C67 /* [CP] Embed Pods Frameworks */,
+				81686635A29BAE134CFC4158 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +202,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75A92F5540927A54A496CE6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LandlordTenant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81686635A29BAE134CFC4158 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87342F50F81E39D0E0B04C67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68473EFA1F4B82DC00AA3C22 /* Sources */ = {
@@ -298,6 +389,7 @@
 		};
 		68473F191F4B82DD00AA3C22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LandlordTenant/Info.plist;
@@ -309,6 +401,7 @@
 		};
 		68473F1A1F4B82DD00AA3C22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LandlordTenant/Info.plist;

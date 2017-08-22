@@ -10,6 +10,8 @@
 
 @interface TenantComplaintDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *complaintTypeImage;
+@property (weak, nonatomic) IBOutlet UITextView *complaintDetails;
 
 @end
 
@@ -23,9 +25,18 @@
         self.testLabel.text = @"General";
     }else if (self.complaintType == maintenance){
         self.testLabel.text = @"Maintenance";
+        self.complaintTypeImage.image = [UIImage imageNamed:@"Wrench-large.jpg"];
     }else if(self.complaintType == noise){
         self.testLabel.text = @"Noise";
     }
+}
+
+
+- (IBAction)addComplaintButton:(id)sender {
+    
+    NSDate *date = [NSDate date];
+    
+    TenantComplaint *complaint = [[TenantComplaint alloc] initWithType:self.complaintType date:date description:self.complaintDetails.text];
 }
 
 - (void)didReceiveMemoryWarning {
