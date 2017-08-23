@@ -8,7 +8,7 @@
 
 #import "TenantComplaintViewController.h"
 #import "TenantComplaintDetailViewController.h"
-#import "TenantComplaint.h"
+#import "TenantComplaintPF.h"
 
 @interface TenantComplaintViewController ()
 
