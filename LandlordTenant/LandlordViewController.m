@@ -11,7 +11,6 @@
 #import "Unit.h"
 #import "UnitViewController.h"
 #import "UnitTableViewCell.h"
-#import "TenantComplaintPF.h"
 
 @interface LandlordViewController () <UITableViewDataSource, UITableViewDelegate, UnitViewControllerDelegate>
 
@@ -33,10 +32,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:true];
-    
-    PFQuery *query = [TenantComplaintPF query];
-    [query whereKey:@"complaintDescription" hasPrefix:@"<<Unit>>"];
-    [query whereKey:@"type" equalTo:@(1)];
 }
 
 #pragma mark - Initial Setup

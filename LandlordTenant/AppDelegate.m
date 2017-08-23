@@ -31,7 +31,36 @@
     
     [Parse initializeWithConfiguration:configuration];
     
+    [self createTye];
     return YES;
+}
+
+- (void)createTye
+{
+    if ([PFUser currentUser]) {
+        return;
+    }
+    
+    PFUser *user = [PFUser user];
+    user.username = @"tye";
+    user.password = @"lighthouse";
+    user.email = @"tye@tye.tye";
+    
+    user[@"adminUser"] = @(NO);
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (error) {
+            // Handle the error
+            NSString *errorString = [error userInfo][@"error"];
+            NSLog(@"Error signing up %@", errorString);
+            return;
+        }
+        
+        // Success
+        NSLog(@"Successfully logged in");
+        
+    }];
 }
 
 
