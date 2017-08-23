@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 
 @interface AppDelegate ()
@@ -22,6 +23,14 @@
     // App ID 1166alberni
     // Master Key: myMasterKey
     // https://landlord-tenant.herokuapp.com/parse
+    
+    ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
+        configuration.applicationId = @"1166alberni";
+        configuration.server = @"https://landlord-tenant.herokuapp.com/parse";
+    }];
+    
+    [Parse initializeWithConfiguration:configuration];
+    
     return YES;
 }
 
