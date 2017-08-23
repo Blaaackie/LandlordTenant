@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		49CBF3BBF7CC5D45E3D9C58F /* Pods_LandlordTenant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB9D24B17DB9C4E33DB3372 /* Pods_LandlordTenant.framework */; };
-		6831CF881F4CF32800B897D1 /* ComplaintHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF871F4CF32800B897D1 /* ComplaintHandler.m */; };
 		6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8A1F4CF34C00B897D1 /* Tenant.m */; };
 		6831CF941F4CF34C00B897D1 /* TenantComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8C1F4CF34C00B897D1 /* TenantComplaint.m */; };
 		6831CF951F4CF34C00B897D1 /* TenantComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */; };
@@ -33,8 +32,6 @@
 /* Begin PBXFileReference section */
 		1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandlordTenant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant.debug.xcconfig"; sourceTree = "<group>"; };
 		467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandlordTenant.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant.release.xcconfig"; sourceTree = "<group>"; };
-		6831CF861F4CF32800B897D1 /* ComplaintHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintHandler.h; sourceTree = "<group>"; };
-		6831CF871F4CF32800B897D1 /* ComplaintHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintHandler.m; sourceTree = "<group>"; };
 		6831CF891F4CF34C00B897D1 /* Tenant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tenant.h; sourceTree = "<group>"; };
 		6831CF8A1F4CF34C00B897D1 /* Tenant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tenant.m; sourceTree = "<group>"; };
 		6831CF8B1F4CF34C00B897D1 /* TenantComplaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaint.h; sourceTree = "<group>"; };
@@ -120,8 +117,6 @@
 		6831CF9B1F4CF3C600B897D1 /* Complaint Handler */ = {
 			isa = PBXGroup;
 			children = (
-				6831CF861F4CF32800B897D1 /* ComplaintHandler.h */,
-				6831CF871F4CF32800B897D1 /* ComplaintHandler.m */,
 			);
 			name = "Complaint Handler";
 			sourceTree = "<group>";
@@ -348,7 +343,6 @@
 				6AF95CE41F4B900F00429692 /* Landlord.m in Sources */,
 				6831CFA11F4CF6C300B897D1 /* TenantViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
-				6831CF881F4CF32800B897D1 /* ComplaintHandler.m in Sources */,
 				6A069DD61F4CEF56006B16AC /* UnitTableViewCell.m in Sources */,
 				6831CF961F4CF34C00B897D1 /* TenantComplaintViewController.m in Sources */,
 				6AF95CFD1F4BC28B00429692 /* Building.m in Sources */,
