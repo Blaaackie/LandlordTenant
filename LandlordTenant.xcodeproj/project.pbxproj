@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49CBF3BBF7CC5D45E3D9C58F /* Pods_LandlordTenant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB9D24B17DB9C4E33DB3372 /* Pods_LandlordTenant.framework */; };
+		6831CF881F4CF32800B897D1 /* ComplaintHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF871F4CF32800B897D1 /* ComplaintHandler.m */; };
+		6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8A1F4CF34C00B897D1 /* Tenant.m */; };
+		6831CF941F4CF34C00B897D1 /* TenantComplaint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8C1F4CF34C00B897D1 /* TenantComplaint.m */; };
+		6831CF951F4CF34C00B897D1 /* TenantComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */; };
+		6831CF961F4CF34C00B897D1 /* TenantComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */; };
+		6831CFA11F4CF6C300B897D1 /* TenantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CFA01F4CF6C300B897D1 /* TenantViewController.m */; };
 		68473F031F4B82DC00AA3C22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F021F4B82DC00AA3C22 /* main.m */; };
 		68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F051F4B82DC00AA3C22 /* AppDelegate.m */; };
-		68473F091F4B82DD00AA3C22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68473F081F4B82DD00AA3C22 /* ViewController.m */; };
 		68473F0C1F4B82DD00AA3C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68473F0A1F4B82DD00AA3C22 /* Main.storyboard */; };
 		68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68473F0D1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld */; };
 		68473F111F4B82DD00AA3C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68473F101F4B82DD00AA3C22 /* Assets.xcassets */; };
@@ -25,12 +31,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandlordTenant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant.debug.xcconfig"; sourceTree = "<group>"; };
+		467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandlordTenant.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant.release.xcconfig"; sourceTree = "<group>"; };
+		6831CF861F4CF32800B897D1 /* ComplaintHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintHandler.h; sourceTree = "<group>"; };
+		6831CF871F4CF32800B897D1 /* ComplaintHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintHandler.m; sourceTree = "<group>"; };
+		6831CF891F4CF34C00B897D1 /* Tenant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tenant.h; sourceTree = "<group>"; };
+		6831CF8A1F4CF34C00B897D1 /* Tenant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tenant.m; sourceTree = "<group>"; };
+		6831CF8B1F4CF34C00B897D1 /* TenantComplaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaint.h; sourceTree = "<group>"; };
+		6831CF8C1F4CF34C00B897D1 /* TenantComplaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaint.m; sourceTree = "<group>"; };
+		6831CF8D1F4CF34C00B897D1 /* TenantComplaintDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaintDetailViewController.h; sourceTree = "<group>"; };
+		6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintDetailViewController.m; sourceTree = "<group>"; };
+		6831CF8F1F4CF34C00B897D1 /* TenantComplaintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaintViewController.h; sourceTree = "<group>"; };
+		6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintViewController.m; sourceTree = "<group>"; };
+		6831CF9F1F4CF6C300B897D1 /* TenantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantViewController.h; sourceTree = "<group>"; };
+		6831CFA01F4CF6C300B897D1 /* TenantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantViewController.m; sourceTree = "<group>"; };
 		68473EFE1F4B82DC00AA3C22 /* LandlordTenant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandlordTenant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68473F021F4B82DC00AA3C22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68473F041F4B82DC00AA3C22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68473F051F4B82DC00AA3C22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68473F071F4B82DD00AA3C22 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		68473F081F4B82DD00AA3C22 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		68473F0B1F4B82DD00AA3C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68473F0E1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LandlordTenant.xcdatamodel; sourceTree = "<group>"; };
 		68473F101F4B82DD00AA3C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +69,7 @@
 		6AF95CF91F4B9BD700429692 /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unit.m; sourceTree = "<group>"; };
 		6AF95CFB1F4BC28B00429692 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
 		6AF95CFC1F4BC28B00429692 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
+		8BB9D24B17DB9C4E33DB3372 /* Pods_LandlordTenant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandlordTenant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +77,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CBF3BBF7CC5D45E3D9C58F /* Pods_LandlordTenant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521416EAC6E757E462757A27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BB9D24B17DB9C4E33DB3372 /* Pods_LandlordTenant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63FF948384A5FF2C0019EF66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */,
+				467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6831CF9A1F4CF3A100B897D1 /* Tenant */ = {
+			isa = PBXGroup;
+			children = (
+				6831CF891F4CF34C00B897D1 /* Tenant.h */,
+				6831CF8A1F4CF34C00B897D1 /* Tenant.m */,
+				6831CF8B1F4CF34C00B897D1 /* TenantComplaint.h */,
+				6831CF8C1F4CF34C00B897D1 /* TenantComplaint.m */,
+				6831CF8D1F4CF34C00B897D1 /* TenantComplaintDetailViewController.h */,
+				6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */,
+				6831CF8F1F4CF34C00B897D1 /* TenantComplaintViewController.h */,
+				6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */,
+				68473F0A1F4B82DD00AA3C22 /* Main.storyboard */,
+			);
+			name = Tenant;
+			sourceTree = "<group>";
+		};
+		6831CF9B1F4CF3C600B897D1 /* Complaint Handler */ = {
+			isa = PBXGroup;
+			children = (
+				6831CF861F4CF32800B897D1 /* ComplaintHandler.h */,
+				6831CF871F4CF32800B897D1 /* ComplaintHandler.m */,
+			);
+			name = "Complaint Handler";
+			sourceTree = "<group>";
+		};
 		68473EF51F4B82DC00AA3C22 = {
 			isa = PBXGroup;
 			children = (
 				68473F001F4B82DC00AA3C22 /* LandlordTenant */,
 				68473EFF1F4B82DC00AA3C22 /* Products */,
+				63FF948384A5FF2C0019EF66 /* Pods */,
+				521416EAC6E757E462757A27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,11 +147,12 @@
 		68473F001F4B82DC00AA3C22 /* LandlordTenant */ = {
 			isa = PBXGroup;
 			children = (
+				6831CF9F1F4CF6C300B897D1 /* TenantViewController.h */,
+				6831CFA01F4CF6C300B897D1 /* TenantViewController.m */,
 				68473F041F4B82DC00AA3C22 /* AppDelegate.h */,
 				68473F051F4B82DC00AA3C22 /* AppDelegate.m */,
-				68473F071F4B82DD00AA3C22 /* ViewController.h */,
-				68473F081F4B82DD00AA3C22 /* ViewController.m */,
-				68473F0A1F4B82DD00AA3C22 /* Main.storyboard */,
+				6831CF9B1F4CF3C600B897D1 /* Complaint Handler */,
+				6831CF9A1F4CF3A100B897D1 /* Tenant */,
 				6AF95CF61F4B967B00429692 /* Landlord */,
 				6AF95CF71F4B969100429692 /* Building */,
 				68473F101F4B82DD00AA3C22 /* Assets.xcassets */,
@@ -151,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68473F181F4B82DD00AA3C22 /* Build configuration list for PBXNativeTarget "LandlordTenant" */;
 			buildPhases = (
+				75A92F5540927A54A496CE6D /* [CP] Check Pods Manifest.lock */,
 				68473EFA1F4B82DC00AA3C22 /* Sources */,
 				68473EFB1F4B82DC00AA3C22 /* Frameworks */,
 				68473EFC1F4B82DC00AA3C22 /* Resources */,
+				87342F50F81E39D0E0B04C67 /* [CP] Embed Pods Frameworks */,
+				81686635A29BAE134CFC4158 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,22 +279,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75A92F5540927A54A496CE6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LandlordTenant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81686635A29BAE134CFC4158 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87342F50F81E39D0E0B04C67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68473EFA1F4B82DC00AA3C22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6AF95CFA1F4B9BD700429692 /* Unit.m in Sources */,
+				6831CF941F4CF34C00B897D1 /* TenantComplaint.m in Sources */,
 				6A069DD71F4CEF56006B16AC /* UnitViewController.m in Sources */,
+				6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */,
 				6AF95CEC1F4B922400429692 /* LandlordViewController.m in Sources */,
 				6AF95CE41F4B900F00429692 /* Landlord.m in Sources */,
-				68473F091F4B82DD00AA3C22 /* ViewController.m in Sources */,
+				6831CFA11F4CF6C300B897D1 /* TenantViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
+				6831CF881F4CF32800B897D1 /* ComplaintHandler.m in Sources */,
 				6A069DD61F4CEF56006B16AC /* UnitTableViewCell.m in Sources */,
+				6831CF961F4CF34C00B897D1 /* TenantComplaintViewController.m in Sources */,
 				6AF95CFD1F4BC28B00429692 /* Building.m in Sources */,
 				6A069DD11F4CEF38006B16AC /* BuildingTableView.m in Sources */,
 				68473F061F4B82DC00AA3C22 /* AppDelegate.m in Sources */,
 				68473F031F4B82DC00AA3C22 /* main.m in Sources */,
+				6831CF951F4CF34C00B897D1 /* TenantComplaintDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +473,13 @@
 		};
 		68473F191F4B82DD00AA3C22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = LandlordTenant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeblackie.LandlordTenant;
@@ -355,8 +489,13 @@
 		};
 		68473F1A1F4B82DD00AA3C22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = LandlordTenant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeblackie.LandlordTenant;
