@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TenantComplaint.h"
+#import "TenantComplaintPF.h"
 
 @interface TenantComplaintDetailViewController : UIViewController
 

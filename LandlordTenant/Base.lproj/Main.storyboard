@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tenant View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TenantViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -57,7 +57,7 @@
                                 <color key="backgroundColor" red="0.74356999988145778" green="1" blue="0.76688027344099086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="AddRequestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YoO-dE-7ph"/>
+                                    <action selector="AddRequestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9iV-LD-ARv"/>
                                     <segue destination="msv-mA-MJt" kind="show" id="zip-zc-0dL"/>
                                 </connections>
                             </button>
@@ -81,10 +81,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addRequestButton" destination="muN-j9-WNh" id="yXU-bz-ZLb"/>
-                        <outlet property="nameLabel" destination="mdi-NJ-vVE" id="aZs-Zj-mmk"/>
-                        <outlet property="phoneNumberLabel" destination="aq7-1U-e3b" id="6zL-0H-6Zc"/>
-                        <outlet property="unitNumberLabel" destination="qNA-Gz-hUO" id="oJB-XI-KpY"/>
+                        <outlet property="addRequestButton" destination="muN-j9-WNh" id="Mmo-se-taE"/>
+                        <outlet property="nameLabel" destination="mdi-NJ-vVE" id="E8Q-lO-lSZ"/>
+                        <outlet property="phoneNumberLabel" destination="aq7-1U-e3b" id="gkB-2x-G8b"/>
+                        <outlet property="unitNumberLabel" destination="qNA-Gz-hUO" id="pcX-2r-eT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
