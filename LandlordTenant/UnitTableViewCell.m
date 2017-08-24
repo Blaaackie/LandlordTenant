@@ -32,8 +32,13 @@
     else
     {
         self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - %@", unit.unitNumber, unit.tenant];
-        if (unit.color == 0) { // changing the cell's color -- the hacky way
-            self.backgroundColor = [UIColor magentaColor];
+        
+        if (unit.color == 0) { // changing the cell's color of the unit in main Landlord View -- the hacky way
+            if (self.complaintsList.lastObject)
+            {
+                // something here to change colors to make Tye's stuff
+            }
+            self.backgroundColor = [UIColor clearColor];
         } else if (unit.color == 1) {
             self.backgroundColor = [UIColor blueColor];
         } else if (unit.color == 2) {

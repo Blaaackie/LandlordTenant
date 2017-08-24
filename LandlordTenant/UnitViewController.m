@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *complaintLabel;
 @property (weak, nonatomic) IBOutlet UITableView *unitTableView;
 @property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaints;
+@property (nonatomic, strong) TenantComplaintPF *post;
 
 @end
 
@@ -62,18 +63,45 @@
 {
     UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ComplaintCell" forIndexPath:indexPath];
     
-    TenantComplaintPF *post = self.complaints[indexPath.row];
-    cell.unitLabel.text = post.complaintDescription;
+    self.post = self.complaints[indexPath.row];
+    cell.unitLabel.text = self.post.complaintDescription;
     
-    if (post.type == 0) {
+    if (self.post.type == 0) {
         cell.backgroundColor = [UIColor magentaColor];
-    } else if (post.type == 1) {
+    } else if (self.post.type == 1) {
         cell.backgroundColor = [UIColor blueColor];
-    } else if (post.type == 2) {
+    } else if (self.post.type == 2) {
         cell.backgroundColor = [UIColor redColor];
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Calls the last object in array and display corresponding color
+    NSInteger lastRow = [tableView numberOfRowsInSection:indexPath.section];
+    
+    if (indexPath.row == lastRow-1)
+    {
+        PFQuery *query= [TenantComplaintPF query];
+        [query whereKey:@"complaintDescription" containedIn:self.complaints.lastObject];
+        NSLog(@"last object %@", self.complaints.lastObject);
+        
+        
+        if (self.post.type == 1)
+        {
+            cell.backgroundColor = [UIColor blueColor];
+        }
+        else if (self.post.type == 2)
+        {
+            cell.backgroundColor = [UIColor redColor];
+        }
+        else if (self.post.type == 3)
+        {
+            cell.backgroundColor = [UIColor whiteColor];
+        }
+    }
 }
 
 #pragma mark - Unit View Controller Delegate Methods
