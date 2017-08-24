@@ -39,15 +39,7 @@
             NSLog(@"%@", error);
             return;
         }
-        
-        NSLog(@"OBjects %@", objects);
-        
-        
-        
         self.complaints = objects;
-        
-        NSLog(@"after complaints %i", [self.complaints[1] isKindOfClass:[NSDictionary class]]);
-        
         
         [self.unitTableView reloadData];
         
