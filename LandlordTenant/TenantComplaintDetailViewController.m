@@ -38,6 +38,8 @@
     
     TenantComplaintPF *tenantComplaint = [[TenantComplaintPF alloc] initWithType:1 date:date description:@"Here is a complaint, my neighbours are a buch of dicks. the leaned a chair against my door, and i was trapped inside my unit for 3 days"];
     
+    tenantComplaint.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    
     [tenantComplaint saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", error.localizedDescription);
