@@ -25,8 +25,8 @@
     // https://landlord-tenant.herokuapp.com/parse
     
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
-        configuration.applicationId = @"1166alberni";
-        configuration.server = @"https://landlord-tenant.herokuapp.com/parse";
+        configuration.applicationId = @"lltenantAppId";
+        configuration.server = @"https://landlordtenant.herokuapp.com/parse";
     }];
     
     [Parse initializeWithConfiguration:configuration];
