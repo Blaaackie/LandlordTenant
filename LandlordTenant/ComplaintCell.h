@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *complaintDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *complaintTypeImageView;
 @property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *complaintColourImageView;
+
 
 @end

@@ -109,6 +109,15 @@
     NSString *dateString = [df stringFromDate:myComplaint.date];
     complaintCell.complaintDescriptionLabel.text = myComplaint.complaintDescription;
     complaintCell.timeStampLabel.text = dateString;
+    
+    if (myComplaint.type == general) {
+        complaintCell.complaintTypeImageView.image = [UIImage imageNamed:@"NewGeneral"];
+    }else if (myComplaint.type == maintenance) {
+        complaintCell.complaintTypeImageView.image = [UIImage imageNamed:@"NewWrench (1)"];
+    }else if (myComplaint.type == noise) {
+        complaintCell.complaintTypeImageView.image = [UIImage imageNamed:@"NewSound"];
+    }
+    
     return complaintCell;
 }
 

@@ -23,11 +23,13 @@
     
     if (self.complaintType == general){
         self.testLabel.text = @"General";
+        self.complaintTypeImage.image = [UIImage imageNamed:@"NewGeneral"];
     }else if (self.complaintType == maintenance){
         self.testLabel.text = @"Maintenance";
-        self.complaintTypeImage.image = [UIImage imageNamed:@"Wrench-large.jpg"];
+        self.complaintTypeImage.image = [UIImage imageNamed:@"NewWrench (1)"];
     }else if(self.complaintType == noise){
         self.testLabel.text = @"Noise";
+        self.complaintTypeImage.image = [UIImage imageNamed:@"NewSound"];
     }
 }
 
@@ -53,6 +55,13 @@
     
     
 }
+
+- (IBAction)cancelButton:(id)sender {
+    
+      [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
