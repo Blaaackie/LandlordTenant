@@ -28,11 +28,13 @@
 {
     if (self.complaintType == general){
         self.unitComplaintTypeLabel.text = @"General";
+         self.unitDetailCellImage.image = [UIImage imageNamed:@"NewGeneral"];
     }else if (self.complaintType == maintenance){
         self.unitComplaintTypeLabel.text = @"Maintenance";
-        self.unitDetailCellImage.image = [UIImage imageNamed:@"Wrench-large.jpg"];
+        self.unitDetailCellImage.image = [UIImage imageNamed:@"NewWrench (1)"];
     }else if(self.complaintType == noise){
         self.unitComplaintTypeLabel.text = @"Noise";
+         self.unitDetailCellImage.image = [UIImage imageNamed:@"NewSound"];
     }
 }
 

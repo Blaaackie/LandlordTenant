@@ -143,7 +143,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="StV-Lw-Ggo" id="1nX-tx-4XG">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="80.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NOZ-wd-K9Z">
@@ -152,13 +152,13 @@
                                                     <color key="backgroundColor" red="0.95911183250193766" green="0.9503641793448725" blue="0.98270283512572942" alpha="0.72407016871165641" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cVN-1b-dce">
-                                                    <rect key="frame" x="298" y="6" width="68" height="68"/>
+                                                    <rect key="frame" x="298" y="6" width="68" height="68.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="68" id="qev-Z9-a9f"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JZ-qG-PES">
-                                                    <rect key="frame" x="8" y="37" width="276" height="21"/>
+                                                    <rect key="frame" x="8" y="37" width="276" height="20.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -186,7 +186,7 @@
                                                 <constraint firstItem="ieB-ea-iXs" firstAttribute="leading" secondItem="1nX-tx-4XG" secondAttribute="leadingMargin" id="zw5-zT-xUw"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.69512846930000005" blue="0.73453227030000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.90196078431372551" green="0.89601368000000003" blue="0.91410394559999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="complaintColourImageView" destination="NOZ-wd-K9Z" id="81E-wA-kJ9"/>
                                             <outlet property="complaintDescriptionLabel" destination="8JZ-qG-PES" id="gf5-EV-x16"/>
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFd-we-Dpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="90"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="89.673913043478265"/>
         </scene>
         <!--Tenant Complaint Detail View Controller-->
         <scene sceneID="mKn-6D-37a">
@@ -347,7 +347,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cT8-mf-kvm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XKX-YY-U19">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XKX-YY-U19">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
