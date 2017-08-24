@@ -35,6 +35,8 @@
     return YES;
 }
 
+
+
 - (void)createTye
 {
     if ([PFUser currentUser]) {
@@ -54,6 +56,17 @@
             // Handle the error
             NSString *errorString = [error userInfo][@"error"];
             NSLog(@"Error signing up %@", errorString);
+            
+            // This is terrible code
+            
+            [PFUser logInWithUsernameInBackground:@"tye" password:@"lighthouse" block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+                if (error)
+                {
+                    NSString *errorString = [error userInfo][@"error"];
+                    NSLog(@"Error logging in %@", errorString);
+                }
+            }];
+        
             return;
         }
         

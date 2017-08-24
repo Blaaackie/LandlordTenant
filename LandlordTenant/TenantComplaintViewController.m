@@ -9,8 +9,12 @@
 #import "TenantComplaintViewController.h"
 #import "TenantComplaintDetailViewController.h"
 #import "TenantComplaintPF.h"
+#import "ComplaintCell.h"
 
 @interface TenantComplaintViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *complaintHistoryView;
+@property (nonatomic, strong) NSArray <TenantComplaintPF*> *complaints;
 
 @end
 
@@ -27,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.complaints = [[NSArray alloc] init];
     // Do any additional setup after loading the view.
 }
 
@@ -35,7 +40,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    PFQuery *query = [TenantComplaintPF query];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"%@", error);
+            return;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.complaints = objects;
 
+            [self.complaintHistoryView reloadData];
+        });
+        
+    }];
+    
+    
+}
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -56,6 +80,36 @@
     }
 
 
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.complaints count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
+    ComplaintCell *complaintCell = [tableView dequeueReusableCellWithIdentifier:@"tenantCell"];
+
+//    
+//    InstaPost *post = self.posts[indexPath.row];
+//    
+//    cell.titleLabel.text = post.title;
+//    cell.userLabel.text = post.postDescription;
+//    
+//    return cell;
+    
+    TenantComplaintPF * myComplaint = self.complaints[indexPath.row];
+    
+    
+    NSDateFormatter* df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"MM/dd/yyyy"];
+    NSString *dateString = [df stringFromDate:myComplaint.date];
+    complaintCell.complaintDescriptionLabel.text = myComplaint.complaintDescription;
+    complaintCell.timeStampLabel.text = dateString;
+    return complaintCell;
 }
 
 
