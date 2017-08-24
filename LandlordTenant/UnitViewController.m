@@ -34,16 +34,21 @@
     [super viewDidAppear:animated];
     
     PFQuery *query = [TenantComplaintPF query];
-//    [query whereKey:@"complaintDescription" hasPrefix:@"Unit 205"];
-    
-    [query whereKey:@"type" equalTo:@(1)];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", error);
             return;
         }
         
+        NSLog(@"OBjects %@", objects);
+        
+        
+        
         self.complaints = objects;
+        
+        NSLog(@"after complaints %i", [self.complaints[1] isKindOfClass:[NSDictionary class]]);
+        
+        
         [self.unitTableView reloadData];
         
     }];
@@ -61,15 +66,20 @@
     return self.complaints.count;
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ComplaintCell" forIndexPath:indexPath];
     
     TenantComplaintPF *post = self.complaints[indexPath.row];
     cell.unitLabel.text = post.complaintDescription;
+    
+    if (post.type == 0) {
+        cell.backgroundColor = [UIColor magentaColor];
+    } else if (post.type == 1) {
+        cell.backgroundColor = [UIColor blueColor];
+    } else if (post.type == 2) {
+        cell.backgroundColor = [UIColor redColor];
+    }
     
     return cell;
 }
@@ -85,6 +95,7 @@
     NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForSelectedRow];
     if ([segue.identifier isEqualToString:@"toUnitDetailView"])
     {
+        
         TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];
         UnitDetailViewController *detailVC = segue.destinationViewController;
         detailVC.compaint = complaint;

@@ -32,6 +32,14 @@
     else
     {
         self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - %@", unit.unitNumber, unit.tenant];
+        if (unit.color == 0) { // changing the cell's color -- the hacky way
+            self.backgroundColor = [UIColor magentaColor];
+        } else if (unit.color == 1) {
+            self.backgroundColor = [UIColor blueColor];
+        } else if (unit.color == 2) {
+            self.backgroundColor = [UIColor redColor];
+        }
+        
     }
 }
 
