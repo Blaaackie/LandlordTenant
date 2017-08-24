@@ -8,9 +8,12 @@
 
 #import "UnitViewController.h"
 #import "TenantComplaintPF.h"
+#import "TenantViewController.h"
+#import "TenantComplaintDetailViewController.h"
 
 @interface UnitViewController ()
 @property (nonatomic, strong) NSString *cellTextLabel;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *complaintLabel;
 @property (weak, nonatomic) IBOutlet UITableView *unitTableView;
 @property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaints;
 
@@ -50,7 +53,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Unit's Data Source
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.complaints.count;
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ComplaintCell" forIndexPath:indexPath];
+    
+    TenantComplaintPF *post = self.complaints[indexPath.row];
+    cell.unitLabel.text = post.complaintDescription;
+    
+    return cell;
+}
 
 #pragma mark - Unit View Controller Delegate Methods
 - (void)setLabelWithText:(NSString *)textLabel
