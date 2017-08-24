@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		68230DE31F4E0AF800CA8D76 /* TenantComplaintPF.m in Sources */ = {isa = PBXBuildFile; fileRef = 68230DE21F4E0AF800CA8D76 /* TenantComplaintPF.m */; };
+		68230DE91F4E6B2F00CA8D76 /* ComplaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68230DE81F4E6B2F00CA8D76 /* ComplaintCell.m */; };
 		6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8A1F4CF34C00B897D1 /* Tenant.m */; };
 		6831CF951F4CF34C00B897D1 /* TenantComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */; };
 		6831CF961F4CF34C00B897D1 /* TenantComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */; };
@@ -33,6 +34,8 @@
 		467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LandlordTenant.release.xcconfig"; path = "Pods/Target Support Files/Pods-LandlordTenant/Pods-LandlordTenant.release.xcconfig"; sourceTree = "<group>"; };
 		68230DE11F4E0AF800CA8D76 /* TenantComplaintPF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaintPF.h; sourceTree = "<group>"; };
 		68230DE21F4E0AF800CA8D76 /* TenantComplaintPF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TenantComplaintPF.m; sourceTree = "<group>"; };
+		68230DE71F4E6B2F00CA8D76 /* ComplaintCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintCell.h; sourceTree = "<group>"; };
+		68230DE81F4E6B2F00CA8D76 /* ComplaintCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintCell.m; sourceTree = "<group>"; };
 		6831CF891F4CF34C00B897D1 /* Tenant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tenant.h; sourceTree = "<group>"; };
 		6831CF8A1F4CF34C00B897D1 /* Tenant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tenant.m; sourceTree = "<group>"; };
 		6831CF8D1F4CF34C00B897D1 /* TenantComplaintDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TenantComplaintDetailViewController.h; sourceTree = "<group>"; };
@@ -92,12 +95,16 @@
 			children = (
 				6831CF891F4CF34C00B897D1 /* Tenant.h */,
 				6831CF8A1F4CF34C00B897D1 /* Tenant.m */,
+				68230DE71F4E6B2F00CA8D76 /* ComplaintCell.h */,
+				68230DE81F4E6B2F00CA8D76 /* ComplaintCell.m */,
 				68230DE11F4E0AF800CA8D76 /* TenantComplaintPF.h */,
 				68230DE21F4E0AF800CA8D76 /* TenantComplaintPF.m */,
 				6831CF8D1F4CF34C00B897D1 /* TenantComplaintDetailViewController.h */,
 				6831CF8E1F4CF34C00B897D1 /* TenantComplaintDetailViewController.m */,
 				6831CF8F1F4CF34C00B897D1 /* TenantComplaintViewController.h */,
 				6831CF901F4CF34C00B897D1 /* TenantComplaintViewController.m */,
+				6831CF9F1F4CF6C300B897D1 /* TenantViewController.h */,
+				6831CFA01F4CF6C300B897D1 /* TenantViewController.m */,
 				68473F0A1F4B82DD00AA3C22 /* Main.storyboard */,
 			);
 			name = Tenant;
@@ -123,8 +130,6 @@
 		68473F001F4B82DC00AA3C22 /* LandlordTenant */ = {
 			isa = PBXGroup;
 			children = (
-				6831CF9F1F4CF6C300B897D1 /* TenantViewController.h */,
-				6831CFA01F4CF6C300B897D1 /* TenantViewController.m */,
 				68473F041F4B82DC00AA3C22 /* AppDelegate.h */,
 				68473F051F4B82DC00AA3C22 /* AppDelegate.m */,
 				6831CF9A1F4CF3A100B897D1 /* Tenant */,
@@ -316,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AF95CFA1F4B9BD700429692 /* Unit.m in Sources */,
+				68230DE91F4E6B2F00CA8D76 /* ComplaintCell.m in Sources */,
 				6A069DD71F4CEF56006B16AC /* UnitViewController.m in Sources */,
 				6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */,
 				6AF95CEC1F4B922400429692 /* LandlordViewController.m in Sources */,

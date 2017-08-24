@@ -36,7 +36,7 @@
     
     NSDate *date = [NSDate date];
     
-    TenantComplaintPF *tenantComplaint = [[TenantComplaintPF object] initWithType:self.complaintType date:date description:@"Here is a complaint, my neighbours are a buch of dicks. the leaned a chair against my door, and i was trapped inside my unit for 3 days"];
+    TenantComplaintPF *tenantComplaint = [[TenantComplaintPF object] initWithType:self.complaintType date:date description:self.complaintDetails.text];
     
     tenantComplaint.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
     

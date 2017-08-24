@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TenantComplaintViewController : UIViewController
+@interface TenantComplaintViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
