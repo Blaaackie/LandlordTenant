@@ -17,7 +17,7 @@
 
 @end
 
-@interface UnitViewController : UIViewController <UnitViewControllerDelegate>
+@interface UnitViewController : UIViewController <UnitViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) Unit *unit;
 @property (nonatomic, weak) id <UnitViewControllerDelegate> delegate;
 

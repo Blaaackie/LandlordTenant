@@ -48,7 +48,7 @@
 
 - (void)unitInformation
 {
-    Unit *unit100 = [[Unit alloc] initWithUnitNumber:100 isVacant:NO];
+    Unit *unit100 = [[Unit alloc] initWithUnitNumber:205 isVacant:NO];
     Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 isVacant:YES];
     Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 isVacant:NO];
     

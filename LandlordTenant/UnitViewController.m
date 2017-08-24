@@ -30,8 +30,9 @@
     [super viewDidAppear:animated];
     
     PFQuery *query = [TenantComplaintPF query];
-    [query whereKey:@"complaintDescription" hasPrefix:@"<<Unit>>"];
-    [query whereKey:@"type" equalTo:@(1)];
+//    [query whereKey:@"complaintDescription" hasPrefix:@"Unit 205"];
+//    [query whereKey:@"complaintDescription" containsString:@"Here is"];
+//    [query whereKey:@"type" equalTo:@(1)];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", error);
@@ -48,6 +49,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - Unit View Controller Delegate Methods
 - (void)setLabelWithText:(NSString *)textLabel
