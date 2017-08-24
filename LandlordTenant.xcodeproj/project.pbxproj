@@ -22,6 +22,7 @@
 		6A069DD11F4CEF38006B16AC /* BuildingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A069DD01F4CEF38006B16AC /* BuildingTableView.m */; };
 		6A069DD61F4CEF56006B16AC /* UnitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A069DD31F4CEF56006B16AC /* UnitTableViewCell.m */; };
 		6A069DD71F4CEF56006B16AC /* UnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A069DD51F4CEF56006B16AC /* UnitViewController.m */; };
+		6A069DDA1F4E81D6006B16AC /* UnitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A069DD91F4E81D6006B16AC /* UnitDetailViewController.m */; };
 		6AF95CE41F4B900F00429692 /* Landlord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF95CE31F4B900F00429692 /* Landlord.m */; };
 		6AF95CE91F4B91CE00429692 /* LandlordStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF95CE81F4B91CE00429692 /* LandlordStoryboard.storyboard */; };
 		6AF95CEC1F4B922400429692 /* LandlordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF95CEB1F4B922400429692 /* LandlordViewController.m */; };
@@ -59,6 +60,8 @@
 		6A069DD31F4CEF56006B16AC /* UnitTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitTableViewCell.m; sourceTree = "<group>"; };
 		6A069DD41F4CEF56006B16AC /* UnitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitViewController.h; sourceTree = "<group>"; };
 		6A069DD51F4CEF56006B16AC /* UnitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitViewController.m; sourceTree = "<group>"; };
+		6A069DD81F4E81D6006B16AC /* UnitDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitDetailViewController.h; sourceTree = "<group>"; };
+		6A069DD91F4E81D6006B16AC /* UnitDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitDetailViewController.m; sourceTree = "<group>"; };
 		6AF95CE21F4B900F00429692 /* Landlord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landlord.h; sourceTree = "<group>"; };
 		6AF95CE31F4B900F00429692 /* Landlord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landlord.m; sourceTree = "<group>"; };
 		6AF95CE81F4B91CE00429692 /* LandlordStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LandlordStoryboard.storyboard; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				6A069DD31F4CEF56006B16AC /* UnitTableViewCell.m */,
 				6A069DD41F4CEF56006B16AC /* UnitViewController.h */,
 				6A069DD51F4CEF56006B16AC /* UnitViewController.m */,
+				6A069DD81F4E81D6006B16AC /* UnitDetailViewController.h */,
+				6A069DD91F4E81D6006B16AC /* UnitDetailViewController.m */,
 			);
 			name = Unit;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				68230DE31F4E0AF800CA8D76 /* TenantComplaintPF.m in Sources */,
 				6AF95CE41F4B900F00429692 /* Landlord.m in Sources */,
 				6831CFA11F4CF6C300B897D1 /* TenantViewController.m in Sources */,
+				6A069DDA1F4E81D6006B16AC /* UnitDetailViewController.m in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
 				6A069DD61F4CEF56006B16AC /* UnitTableViewCell.m in Sources */,
 				6831CF961F4CF34C00B897D1 /* TenantComplaintViewController.m in Sources */,

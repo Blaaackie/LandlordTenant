@@ -38,7 +38,7 @@
 
 - (void)propertySetup
 {
-    Landlord *landlord = [[Landlord alloc] initWithname:@"Bill"];
+    Landlord *landlord = [[Landlord alloc] initWithname:@"Bill Gates"];
 
     self.landlordNameLabel.text = [NSString stringWithFormat:@"%@", landlord.landlordName];
     
@@ -48,11 +48,11 @@
 
 - (void)unitInformation
 {
-    Unit *unit100 = [[Unit alloc] initWithUnitNumber:205 isVacant:NO];
-    Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 isVacant:YES];
-    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 isVacant:NO];
+    Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 withTenant:@"Vacant" isVacant:YES];
+    Unit *unit205 = [[Unit alloc] initWithUnitNumber:205 withTenant:@"Tye Blackie" isVacant:NO];
+    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 withTenant:@"Linh Tu" isVacant:NO];
     
-    Building *building1 = [[Building alloc] initWithName:@"Lighthouse Labs - 128 W Hastings St" withUnits:@[unit100, unit201]];
+    Building *building1 = [[Building alloc] initWithName:@"Lighthouse Labs - 128 W Hastings St" withUnits:@[unit201, unit205]];
     Building *building2 = [[Building alloc] initWithName:@"Harbour Centre - 555 W Hastings St" withUnits:@[unit1805]];
     
     self.buildings = @[building1, building2];
@@ -84,9 +84,12 @@
     
     Building *building = self.buildings[indexPath.section];
     NSArray *units = building.units;
+    Tenant *tenant = [[Tenant alloc] initWithName:@"Tye Blackie"
+                                      phoneNumber:@"403.680.9430"
+                                       unitNumber:@"Unit 205"];
     
     Unit *unitObject = units[indexPath.row];
-    [cell configureCellWithUnit:unitObject];
+    [cell configureCellWithUnit:unitObject withTenant:tenant];
     
     return cell;
 }
@@ -99,7 +102,7 @@
 }
 
 
-- (void)setLabelWithText:(NSString *)textLabel
+- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
 }

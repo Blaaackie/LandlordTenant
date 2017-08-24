@@ -8,9 +8,13 @@
 
 #import "UnitViewController.h"
 #import "TenantComplaintPF.h"
+#import "TenantViewController.h"
+#import "TenantComplaintDetailViewController.h"
+#import "UnitDetailViewController.h"
 
 @interface UnitViewController ()
 @property (nonatomic, strong) NSString *cellTextLabel;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *complaintLabel;
 @property (weak, nonatomic) IBOutlet UITableView *unitTableView;
 @property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaints;
 
@@ -31,8 +35,8 @@
     
     PFQuery *query = [TenantComplaintPF query];
 //    [query whereKey:@"complaintDescription" hasPrefix:@"Unit 205"];
-//    [query whereKey:@"complaintDescription" containsString:@"Here is"];
-//    [query whereKey:@"type" equalTo:@(1)];
+    
+    [query whereKey:@"type" equalTo:@(1)];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", error);
@@ -50,9 +54,44 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Unit's Data Source
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.complaints.count;
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ComplaintCell" forIndexPath:indexPath];
+    
+    TenantComplaintPF *post = self.complaints[indexPath.row];
+    cell.unitLabel.text = post.complaintDescription;
+    
+    return cell;
+}
 
 #pragma mark - Unit View Controller Delegate Methods
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toUnitDetailView" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForSelectedRow];
+    if ([segue.identifier isEqualToString:@"toUnitDetailView"])
+    {
+        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];
+        UnitDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.compaint = complaint;
+    }
+    // destinationViewController from landlord's unit complaint
+}
+
 - (void)setLabelWithText:(NSString *)textLabel
 {
     self.cellTextLabel = textLabel;

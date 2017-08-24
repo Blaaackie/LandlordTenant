@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Building.h"
+#import "Tenant.h"
 
 @interface Unit : NSObject
 @property (nonatomic, assign) int unitNumber;
 @property (nonatomic, assign) BOOL isVacant;
+@property (nonatomic, strong) NSString *tenant;
 
-- (instancetype)initWithUnitNumber:(int)unitNumber isVacant:(BOOL)isVacant;
+- (instancetype)initWithUnitNumber:(int)unitNumber withTenant:(NSString *)tenant isVacant:(BOOL)isVacant;
 
 @end
