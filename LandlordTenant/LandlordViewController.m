@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSArray <Building *> *buildings;
 @property (nonatomic, strong) TenantComplaintPF *post;
 @property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaints;
+@property (nonatomic, assign) id colorIndicator;
 
 @end
 
@@ -28,9 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self propertySetup];
+    
+
+
+    
 }
-
-
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -51,14 +54,16 @@
 
 - (void)unitInformation
 {
-    Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 withTenant:@"Vacant" isVacant:YES andColor:0];
-    Unit *unit205 = [[Unit alloc] initWithUnitNumber:205 withTenant:@"Tye Blackie" isVacant:NO andColor:1];
-    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 withTenant:@"Linh Tu" isVacant:NO andColor:0];
+    Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 withTenant:@"Vacant" isVacant:YES];// andColor:1];
+    Unit *unit205 = [[Unit alloc] initWithUnitNumber:205 withTenant:@"Tye Blackie" isVacant:NO];// andColor:2];
+    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 withTenant:@"Linh Tu" isVacant:NO];// andColor:1];
     
     Building *building1 = [[Building alloc] initWithName:@"Lighthouse Labs - 128 W Hastings St" withUnits:@[unit201, unit205]];
     Building *building2 = [[Building alloc] initWithName:@"Harbour Centre - 555 W Hastings St" withUnits:@[unit1805]];
     
     self.buildings = @[building1, building2];
+    
+
 }
 
 #pragma mark - Landlord Data Source
@@ -97,33 +102,6 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    // Calls the last object in array and display corresponding color
-//    NSInteger lastRow = [tableView numberOfRowsInSection:indexPath.section];
-//    
-//    if (indexPath.row == lastRow-1)
-//    {
-//        PFQuery *query= [TenantComplaintPF query];
-//        [query whereKey:@"complaintDescription" containedIn:self.complaints.lastObject];
-//        NSLog(@"last object %@", self.complaints.lastObject);
-//        
-//        
-//        if (self.post.type == 1)
-//        {
-//            cell.backgroundColor = [UIColor blueColor];
-//        }
-//        else if (self.post.type == 2)
-//        {
-//            cell.backgroundColor = [UIColor redColor];
-//        }
-//        else if (self.post.type == 3)
-//        {
-//            cell.backgroundColor = [UIColor whiteColor];
-//        }
-//    }
-//}
-
 
 #pragma mark = Landlord Delegate
 
@@ -131,6 +109,27 @@
 {
     [self performSegueWithIdentifier:@"toUnitTableView" sender:[self.landlordTableView cellForRowAtIndexPath:indexPath]];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PFQuery *query = [TenantComplaintPF query];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        NSDictionary *lastComplaintObject = [objects lastObject];
+        self.colorIndicator = [lastComplaintObject objectForKey:@"type"];
+        
+        if ([self.colorIndicator isEqual:@1]) {
+            cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
+        } else if ([self.colorIndicator isEqual:@2]) {
+            cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
+        } else if([self.complaints isEqual:@3]) {
+            cell.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];;
+        }
+        
+        
+    }];
+    // Calls the last object in array and display corresponding color
+
 }
 
 #pragma mark - Navigation
