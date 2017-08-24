@@ -21,18 +21,17 @@
     // Configure the view for the selected state
 }
 
-- (void)configureCellWithUnit:(Unit *)unit
+- (void)configureCellWithUnit:(Unit *)unit withTenant:(Tenant *) tenant
 {
+    self.tenantName = tenant.name;
     if (unit.isVacant)
     {
-//        self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - Vacant", unit.unitNumber];
-//        self.unitLabel.attributedText = [[NSAttributedString alloc] initWithString:vacantUnit attributes:@{NSFontAttributeName: [UIFont italicSystemFontOfSize:[UIFont systemFontSize]]}];
         NSString *vacantUnit = [NSString stringWithFormat:@"Unit %d - Vacant", unit.unitNumber];
         self.unitLabel.attributedText = [[NSAttributedString alloc] initWithString:vacantUnit attributes:@{NSFontAttributeName: [UIFont italicSystemFontOfSize:17]}];
     }
     else
     {
-        self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - <Insert Tenant Name>", unit.unitNumber];
+        self.unitLabel.text = [NSString stringWithFormat:@"Unit %d - %@", unit.unitNumber, unit.tenant];
     }
 }
 

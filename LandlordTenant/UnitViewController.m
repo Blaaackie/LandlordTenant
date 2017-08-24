@@ -10,6 +10,7 @@
 #import "TenantComplaintPF.h"
 #import "TenantViewController.h"
 #import "TenantComplaintDetailViewController.h"
+#import "UnitDetailViewController.h"
 
 @interface UnitViewController ()
 @property (nonatomic, strong) NSString *cellTextLabel;
@@ -34,8 +35,8 @@
     
     PFQuery *query = [TenantComplaintPF query];
 //    [query whereKey:@"complaintDescription" hasPrefix:@"Unit 205"];
-//    [query whereKey:@"complaintDescription" containsString:@"Here is"];
-//    [query whereKey:@"type" equalTo:@(1)];
+    
+    [query whereKey:@"type" equalTo:@(1)];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@", error);
@@ -74,6 +75,23 @@
 }
 
 #pragma mark - Unit View Controller Delegate Methods
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toUnitDetailView" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForSelectedRow];
+    if ([segue.identifier isEqualToString:@"toUnitDetailView"])
+    {
+        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];
+        UnitDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.compaint = complaint;
+    }
+    // destinationViewController from landlord's unit complaint
+}
+
 - (void)setLabelWithText:(NSString *)textLabel
 {
     self.cellTextLabel = textLabel;

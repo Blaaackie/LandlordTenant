@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Unit.h"
+#import "Tenant.h"
+#import "TenantViewController.h"
 
 @interface UnitTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
+@property (nonatomic, strong) NSString *tenantName;
 
-- (void)configureCellWithUnit:(Unit *)unit;
+- (void)configureCellWithUnit:(Unit *)unit withTenant:(Tenant *) tenant;
 
 @end

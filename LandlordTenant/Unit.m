@@ -10,11 +10,12 @@
 
 @implementation Unit
 
-- (instancetype)initWithUnitNumber:(int)unitNumber isVacant:(BOOL)isVacant
+- (instancetype)initWithUnitNumber:(int)unitNumber withTenant:(NSString *)tenant isVacant:(BOOL)isVacant
 {
     if (self = [super init])
     {
         _unitNumber = unitNumber;
+        _tenant = tenant;
         _isVacant = isVacant;
     }
     return self;
