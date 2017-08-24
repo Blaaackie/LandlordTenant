@@ -11,12 +11,15 @@
 #import "Unit.h"
 #import "UnitViewController.h"
 #import "UnitTableViewCell.h"
+#import "TenantComplaintPF.h"
 
 @interface LandlordViewController () <UITableViewDataSource, UITableViewDelegate, UnitViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *landlordTableView;
 @property (weak, nonatomic) IBOutlet UILabel *landlordNameLabel;
 @property (nonatomic, strong) NSArray <Building *> *buildings;
+@property (nonatomic, strong) TenantComplaintPF *post;
+@property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaints;
 
 @end
 
@@ -50,7 +53,7 @@
 {
     Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 withTenant:@"Vacant" isVacant:YES andColor:0];
     Unit *unit205 = [[Unit alloc] initWithUnitNumber:205 withTenant:@"Tye Blackie" isVacant:NO andColor:1];
-    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 withTenant:@"Linh Tu" isVacant:NO andColor:2];
+    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 withTenant:@"Linh Tu" isVacant:NO andColor:0];
     
     Building *building1 = [[Building alloc] initWithName:@"Lighthouse Labs - 128 W Hastings St" withUnits:@[unit201, unit205]];
     Building *building2 = [[Building alloc] initWithName:@"Harbour Centre - 555 W Hastings St" withUnits:@[unit1805]];
@@ -94,17 +97,40 @@
     return cell;
 }
 
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // Calls the last object in array and display corresponding color
+//    NSInteger lastRow = [tableView numberOfRowsInSection:indexPath.section];
+//    
+//    if (indexPath.row == lastRow-1)
+//    {
+//        PFQuery *query= [TenantComplaintPF query];
+//        [query whereKey:@"complaintDescription" containedIn:self.complaints.lastObject];
+//        NSLog(@"last object %@", self.complaints.lastObject);
+//        
+//        
+//        if (self.post.type == 1)
+//        {
+//            cell.backgroundColor = [UIColor blueColor];
+//        }
+//        else if (self.post.type == 2)
+//        {
+//            cell.backgroundColor = [UIColor redColor];
+//        }
+//        else if (self.post.type == 3)
+//        {
+//            cell.backgroundColor = [UIColor whiteColor];
+//        }
+//    }
+//}
+
+
 #pragma mark = Landlord Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"toUnitTableView" sender:[self.landlordTableView cellForRowAtIndexPath:indexPath]];
-}
-
-
-- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Navigation
@@ -125,6 +151,9 @@
         unitVC.title = cell.textLabel.text;
     }
 }
+
+- (void)setLabelWithText:(NSString *)textLabel
+{}
  
 
 @end
