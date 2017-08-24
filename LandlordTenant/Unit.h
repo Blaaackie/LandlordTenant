@@ -16,6 +16,6 @@
 @property (nonatomic, strong) NSString *tenant;
 @property (nonatomic, assign) int color;
 
-- (instancetype)initWithUnitNumber:(int)unitNumber withTenant:(NSString *)tenant isVacant:(BOOL)isVacant andColor:(int)color;
+- (instancetype)initWithUnitNumber:(int)unitNumber withTenant:(NSString *)tenant isVacant:(BOOL)isVacant;// andColor:(int)color;
 
 @end

@@ -66,12 +66,12 @@
     self.post = self.complaints[indexPath.row];
     cell.unitLabel.text = self.post.complaintDescription;
     
-    if (self.post.type == 0) {
-        cell.backgroundColor = [UIColor magentaColor];
-    } else if (self.post.type == 1) {
-        cell.backgroundColor = [UIColor blueColor];
+    if (self.post.type == 1) {
+        cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
     } else if (self.post.type == 2) {
-        cell.backgroundColor = [UIColor redColor];
+        cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
+    } else if (self.post.type == 3) {
+        cell.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];
     }
     
     return cell;
@@ -80,45 +80,39 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Calls the last object in array and display corresponding color
-    NSInteger lastRow = [tableView numberOfRowsInSection:indexPath.section];
     
-    if (indexPath.row == lastRow-1)
-    {
-        PFQuery *query= [TenantComplaintPF query];
-        [query whereKey:@"complaintDescription" containedIn:self.complaints.lastObject];
-        NSLog(@"last object %@", self.complaints.lastObject);
-        
-        
-        if (self.post.type == 1)
-        {
-            cell.backgroundColor = [UIColor blueColor];
-        }
-        else if (self.post.type == 2)
-        {
-            cell.backgroundColor = [UIColor redColor];
-        }
-        else if (self.post.type == 3)
-        {
-            cell.backgroundColor = [UIColor whiteColor];
-        }
-    }
+//    if (self.post.type == 1)
+//    {
+//        cell.backgroundColor = [UIColor blueColor];
+//    }
+//    else if (self.post.type == 2)
+//    {
+//        cell.backgroundColor = [UIColor redColor];
+//    }
+//    else if (self.post.type == 3)
+//    {
+//        cell.backgroundColor = [UIColor whiteColor];
+//    }
 }
 
 #pragma mark - Unit View Controller Delegate Methods
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"toUnitDetailView" sender:self];
+    [self performSegueWithIdentifier:@"toUnitDetailView" sender:[self.unitTableView cellForRowAtIndexPath:indexPath]];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForSelectedRow];
+//    NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForSelectedRow];
     if ([segue.identifier isEqualToString:@"toUnitDetailView"])
     {
+//        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];
+        UnitTableViewCell *cell = (UnitTableViewCell *)sender;
+        NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForCell:cell];
         
-        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];
-        UnitDetailViewController *detailVC = segue.destinationViewController;
-        detailVC.compaint = complaint;
+        Unit *unit = [self.complaints objectAtIndex:selectedIndexPath.item];
+        UnitDetailViewController *detailVC = [segue destinationViewController];
+        detailVC.complaintType = unit;
     }
     // destinationViewController from landlord's unit complaint
 }

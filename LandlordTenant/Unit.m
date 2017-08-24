@@ -10,14 +10,14 @@
 
 @implementation Unit
 
-- (instancetype)initWithUnitNumber:(int)unitNumber withTenant:(NSString *)tenant isVacant:(BOOL)isVacant andColor:(int)color;
+- (instancetype)initWithUnitNumber:(int)unitNumber withTenant:(NSString *)tenant isVacant:(BOOL)isVacant// andColor:(int)color;
 {
     if (self = [super init])
     {
         _unitNumber = unitNumber;
         _tenant = tenant;
         _isVacant = isVacant;
-        _color = color;
+//        _color = color;
     }
     return self;
 }
