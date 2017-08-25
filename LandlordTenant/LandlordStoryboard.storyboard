@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,14 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Landlord Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYZ-wA-rb7">
-                                <rect key="frame" x="16" y="72" width="343" height="59"/>
-                                <color key="backgroundColor" red="0.96064853668212891" green="0.96025692070986901" blue="0.95722825889242813" alpha="0.44490509969325154" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Evp-bV-Z5g" customClass="BuildingTableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Evp-bV-Z5g" customClass="BuildingTableView">
                                 <rect key="frame" x="16" y="174" width="343" height="473"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -65,16 +59,13 @@
                         <constraints>
                             <constraint firstItem="VEf-3u-WHM" firstAttribute="top" secondItem="Evp-bV-Z5g" secondAttribute="bottom" constant="20" id="8bz-bJ-Xxt"/>
                             <constraint firstItem="Evp-bV-Z5g" firstAttribute="leading" secondItem="Jhp-bf-5UE" secondAttribute="leading" constant="16" id="K12-5e-T38"/>
-                            <constraint firstItem="wYZ-wA-rb7" firstAttribute="leading" secondItem="Jhp-bf-5UE" secondAttribute="leadingMargin" id="MGH-2y-8gW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wYZ-wA-rb7" secondAttribute="trailing" id="Pc6-Vj-G8v"/>
+                            <constraint firstAttribute="leading" secondItem="Jhp-bf-5UE" secondAttribute="leadingMargin" id="MGH-2y-8gW"/>
                             <constraint firstAttribute="trailing" secondItem="Evp-bV-Z5g" secondAttribute="trailing" constant="16" id="TLI-Zu-28R"/>
-                            <constraint firstItem="wYZ-wA-rb7" firstAttribute="top" secondItem="0fW-cu-sjq" secondAttribute="bottom" constant="8" id="j4i-mh-IhL"/>
-                            <constraint firstItem="Evp-bV-Z5g" firstAttribute="top" secondItem="wYZ-wA-rb7" secondAttribute="bottom" constant="43" id="uiA-Tx-MSY"/>
+                            <constraint firstAttribute="top" secondItem="0fW-cu-sjq" secondAttribute="bottom" constant="8" id="j4i-mh-IhL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UKL-Di-aWP"/>
                     <connections>
-                        <outlet property="landlordNameLabel" destination="wYZ-wA-rb7" id="oSa-tp-Bfj"/>
                         <outlet property="landlordTableView" destination="Evp-bV-Z5g" id="ZGo-DP-sBq"/>
                         <segue destination="vmh-tb-OKH" kind="show" identifier="toUnitTableView" id="eMN-aJ-fLE"/>
                     </connections>
