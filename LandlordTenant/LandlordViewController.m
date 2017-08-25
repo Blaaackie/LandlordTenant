@@ -92,12 +92,9 @@
     
     Building *building = self.buildings[indexPath.section];
     NSArray *units = building.units;
-    Tenant *tenant = [[Tenant alloc] initWithName:@"Tye Blackie"
-                                      phoneNumber:@"403.680.9430"
-                                       unitNumber:@"Unit 205"];
     
     Unit *unitObject = units[indexPath.row];
-    [cell configureCellWithUnit:unitObject withTenant:tenant];
+    [cell configureCellWithUnit:unitObject];
     
     return cell;
 }
@@ -113,17 +110,21 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
     PFQuery *query = [TenantComplaintPF query];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         NSDictionary *lastComplaintObject = [objects lastObject];
-        self.colorIndicator = [lastComplaintObject objectForKey:@"type"];
+        int colorIndicator = [(NSNumber *)[lastComplaintObject objectForKey:@"type"] intValue];
         
-        if ([self.colorIndicator isEqual:@1]) {
-            cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
-        } else if ([self.colorIndicator isEqual:@2]) {
-            cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
-        } else if([self.complaints isEqual:@3]) {
-            cell.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];;
+        if([((UnitTableViewCell*)cell).tenantName isEqualToString:@"Tye Blackie"]) {
+            if (colorIndicator == 1) {
+                cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
+            } else if (colorIndicator == 2) {
+                cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
+            } else if(colorIndicator == 3) {
+                cell.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];;
+            }
         }
         
         
