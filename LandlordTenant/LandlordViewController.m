@@ -110,12 +110,14 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     PFQuery *query = [TenantComplaintPF query];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        NSDictionary *lastComplaintObject = [objects lastObject];
-        int colorIndicator = [(NSNumber *)[lastComplaintObject objectForKey:@"type"] intValue];
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+        NSArray *sortDescriptorArray = [NSArray arrayWithObject:sortDescriptor];
+        TenantComplaintPF *lastComplaintObject = (TenantComplaintPF *)[[objects sortedArrayUsingDescriptors:sortDescriptorArray] firstObject];
+        int colorIndicator = lastComplaintObject.type;// [(NSNumber *)[lastComplaintObject objectForKey:@"type"] intValue];
+        
+        NSLog(@"color indicator %d", colorIndicator);
         
         if([((UnitTableViewCell*)cell).tenantName isEqualToString:@"Tye Blackie"]) {
             if (colorIndicator == 1) {
@@ -126,7 +128,6 @@
                 cell.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];;
             }
         }
-        
         
     }];
     // Calls the last object in array and display corresponding color
