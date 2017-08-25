@@ -100,9 +100,9 @@
         UnitTableViewCell *cell = (UnitTableViewCell *)sender;
         NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForCell:cell];
         
-        Unit *unit = [self.complaints objectAtIndex:selectedIndexPath.item];
+        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.item];
         UnitDetailViewController *detailVC = [segue destinationViewController];
-        detailVC.complaintType = unit;
+        detailVC.complaint = complaint;
     }
     // destinationViewController from landlord's unit complaint
 }

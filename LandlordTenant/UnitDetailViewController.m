@@ -26,16 +26,18 @@
 
 - (void)configureView
 {
-    if (self.complaintType == general){
+    if (self.complaint.type == general){
         self.unitComplaintTypeLabel.text = @"General";
          self.unitDetailCellImage.image = [UIImage imageNamed:@"NewGeneral"];
-    }else if (self.complaintType == maintenance){
+    }else if (self.complaint.type == maintenance){
         self.unitComplaintTypeLabel.text = @"Maintenance";
         self.unitDetailCellImage.image = [UIImage imageNamed:@"NewWrench (1)"];
-    }else if(self.complaintType == noise){
+    }else if(self.complaint.type == noise){
         self.unitComplaintTypeLabel.text = @"Noise";
          self.unitDetailCellImage.image = [UIImage imageNamed:@"NewSound"];
     }
+    self.unitComplaintDescriptionView.text = [NSString stringWithFormat:@"%@", self.complaint.complaintDescription];
+    NSLog(@"description %@", self.complaint.complaintDescription);
 }
 
 - (void)didReceiveMemoryWarning {
