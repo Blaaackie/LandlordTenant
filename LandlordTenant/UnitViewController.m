@@ -26,8 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    self.title = [NSString stringWithFormat:@"%@", self.unit]; // For Header of Unit Table View
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -40,16 +38,15 @@
             NSLog(@"%@", error);
             return;
         }
-        self.complaints = objects;
+        
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+        NSArray *sortDescriptorArray = [NSArray arrayWithObject:sortDescriptor];
+        
+        self.complaints = [objects sortedArrayUsingDescriptors:sortDescriptorArray];
         
         [self.unitTableView reloadData];
         
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Unit's Data Source
@@ -96,7 +93,6 @@
 {
     if ([segue.identifier isEqualToString:@"toUnitDetailView"])
     {
-//        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];
         UnitTableViewCell *cell = (UnitTableViewCell *)sender;
         NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForCell:cell];
         
@@ -104,7 +100,6 @@
         UnitDetailViewController *detailVC = [segue destinationViewController];
         detailVC.complaint = complaint;
     }
-    // destinationViewController from landlord's unit complaint
 }
 
 - (void)setLabelWithText:(NSString *)textLabel
