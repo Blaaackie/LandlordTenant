@@ -28,10 +28,8 @@
     [super viewDidLoad];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+-(void)fetchData
 {
-    [super viewDidAppear:animated];
-    
     PFQuery *query = [TenantComplaintPF query];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (error) {
@@ -47,6 +45,13 @@
         [self.unitTableView reloadData];
         
     }];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self fetchData];
 }
 
 #pragma mark - Unit's Data Source
@@ -105,6 +110,11 @@
 - (void)setLabelWithText:(NSString *)textLabel
 {
     self.cellTextLabel = textLabel;
+}
+
+- (IBAction)refreshButton:(UIButton *)sender {
+    
+    [self fetchData];
 }
 
 @end
