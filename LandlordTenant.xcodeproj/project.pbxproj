@@ -19,6 +19,7 @@
 		68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68473F0D1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld */; };
 		68473F111F4B82DD00AA3C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68473F101F4B82DD00AA3C22 /* Assets.xcassets */; };
 		68473F141F4B82DD00AA3C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68473F121F4B82DD00AA3C22 /* LaunchScreen.storyboard */; };
+		687E72C01F4F9BDB00ED99E6 /* Tenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E72BF1F4F9BDB00ED99E6 /* Tenant.swift */; };
 		6A069DD11F4CEF38006B16AC /* BuildingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A069DD01F4CEF38006B16AC /* BuildingTableView.m */; };
 		6A069DD61F4CEF56006B16AC /* UnitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A069DD31F4CEF56006B16AC /* UnitTableViewCell.m */; };
 		6A069DD71F4CEF56006B16AC /* UnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A069DD51F4CEF56006B16AC /* UnitViewController.m */; };
@@ -54,6 +55,8 @@
 		68473F101F4B82DD00AA3C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68473F131F4B82DD00AA3C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68473F151F4B82DD00AA3C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		687E72BE1F4F9BDA00ED99E6 /* LandlordTenant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LandlordTenant-Bridging-Header.h"; sourceTree = "<group>"; };
+		687E72BF1F4F9BDB00ED99E6 /* Tenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tenant.swift; sourceTree = "<group>"; };
 		6A069DCF1F4CEF38006B16AC /* BuildingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingTableView.h; sourceTree = "<group>"; };
 		6A069DD01F4CEF38006B16AC /* BuildingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildingTableView.m; sourceTree = "<group>"; };
 		6A069DD21F4CEF56006B16AC /* UnitTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTableViewCell.h; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		6831CF9A1F4CF3A100B897D1 /* Tenant */ = {
 			isa = PBXGroup;
 			children = (
+				687E72BF1F4F9BDB00ED99E6 /* Tenant.swift */,
 				6831CF891F4CF34C00B897D1 /* Tenant.h */,
 				6831CF8A1F4CF34C00B897D1 /* Tenant.m */,
 				68230DE71F4E6B2F00CA8D76 /* ComplaintCell.h */,
@@ -109,6 +113,7 @@
 				6831CF9F1F4CF6C300B897D1 /* TenantViewController.h */,
 				6831CFA01F4CF6C300B897D1 /* TenantViewController.m */,
 				68473F0A1F4B82DD00AA3C22 /* Main.storyboard */,
+				687E72BE1F4F9BDA00ED99E6 /* LandlordTenant-Bridging-Header.h */,
 			);
 			name = Tenant;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				TargetAttributes = {
 					68473EFD1F4B82DC00AA3C22 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -334,6 +340,7 @@
 				6AF95CE41F4B900F00429692 /* Landlord.m in Sources */,
 				6831CFA11F4CF6C300B897D1 /* TenantViewController.m in Sources */,
 				6A069DDA1F4E81D6006B16AC /* UnitDetailViewController.m in Sources */,
+				687E72C01F4F9BDB00ED99E6 /* Tenant.swift in Sources */,
 				68473F0F1F4B82DD00AA3C22 /* LandlordTenant.xcdatamodeld in Sources */,
 				6A069DD61F4CEF56006B16AC /* UnitTableViewCell.m in Sources */,
 				6831CF961F4CF34C00B897D1 /* TenantComplaintViewController.m in Sources */,
@@ -462,6 +469,7 @@
 			baseConfigurationReference = 1E966D8CB2913951A6D2F31A /* Pods-LandlordTenant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_INFINITE_RECURSION = NO;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -470,6 +478,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeblackie.LandlordTenant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LandlordTenant/LandlordTenant-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -478,6 +489,7 @@
 			baseConfigurationReference = 467329E2F12A306B65C76173 /* Pods-LandlordTenant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_INFINITE_RECURSION = NO;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -486,6 +498,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tyeblackie.LandlordTenant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LandlordTenant/LandlordTenant-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

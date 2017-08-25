@@ -50,15 +50,16 @@
             return;
         }
         
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+        NSArray *sortDescriptorArray = [NSArray arrayWithObject:sortDescriptor];
+        
+        self.complaints = [objects sortedArrayUsingDescriptors:sortDescriptorArray];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.complaints = objects;
 
             [self.complaintHistoryView reloadData];
         });
-        
     }];
-    
-    
 }
 #pragma mark - Navigation
 
@@ -78,9 +79,9 @@
         
         vc.complaintType = general;
     }
-
-
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -89,20 +90,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    
     ComplaintCell *complaintCell = [tableView dequeueReusableCellWithIdentifier:@"tenantCell"];
 
-//    
-//    InstaPost *post = self.posts[indexPath.row];
-//    
-//    cell.titleLabel.text = post.title;
-//    cell.userLabel.text = post.postDescription;
-//    
-//    return cell;
-    
     TenantComplaintPF * myComplaint = self.complaints[indexPath.row];
-    
     
     NSDateFormatter* df = [[NSDateFormatter alloc]init];
     [df setDateFormat:@"MM/dd/yyyy"];
@@ -117,7 +107,6 @@
     }else if (myComplaint.type == noise) {
         complaintCell.complaintTypeImageView.image = [UIImage imageNamed:@"NewSound"];
     }
-    
     return complaintCell;
 }
 
