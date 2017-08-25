@@ -86,7 +86,6 @@
         <!--Unit View Controller-->
         <scene sceneID="TtY-Jl-7N8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aui-5f-n79" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="vmh-tb-OKH" customClass="UnitViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z4P-jG-vKS"/>
@@ -172,9 +171,10 @@
                     </view>
                     <connections>
                         <outlet property="unitTableView" destination="U8C-jQ-Fze" id="eVI-Vy-Tdb"/>
-                        <segue destination="Wvv-V8-9yS" kind="showDetail" identifier="toUnitDetailView" id="O49-Jr-GBr"/>
+                        <segue destination="Wvv-V8-9yS" kind="show" identifier="toUnitDetailView" id="jfV-U0-bII"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aui-5f-n79" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1836" y="138.98050974512745"/>
         </scene>
@@ -242,8 +242,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="complaintTypeImage" destination="3gv-b4-Tm6" id="xd7-7p-30k"/>
-                        <outlet property="testLabel" destination="g9p-Zn-7Up" id="0nm-bp-dEQ"/>
                         <outlet property="unitComplaintDescriptionView" destination="cB4-mj-s2j" id="xc2-3e-9oi"/>
                         <outlet property="unitComplaintTypeLabel" destination="g9p-Zn-7Up" id="Nyb-nK-59o"/>
                         <outlet property="unitDetailCellImage" destination="3gv-b4-Tm6" id="anC-Wu-NFG"/>

@@ -94,7 +94,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForSelectedRow];
     if ([segue.identifier isEqualToString:@"toUnitDetailView"])
     {
 //        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];

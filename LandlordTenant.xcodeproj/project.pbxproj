@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F334DB2ED6262E1A355CA5 /* Pods_LandlordTenant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFC58823BB84A7604CF2A16 /* Pods_LandlordTenant.framework */; };
 		68230DE31F4E0AF800CA8D76 /* TenantComplaintPF.m in Sources */ = {isa = PBXBuildFile; fileRef = 68230DE21F4E0AF800CA8D76 /* TenantComplaintPF.m */; };
 		68230DE91F4E6B2F00CA8D76 /* ComplaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68230DE81F4E6B2F00CA8D76 /* ComplaintCell.m */; };
 		6831CF931F4CF34C00B897D1 /* Tenant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831CF8A1F4CF34C00B897D1 /* Tenant.m */; };
@@ -71,6 +72,7 @@
 		6AF95CF91F4B9BD700429692 /* Unit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Unit.m; sourceTree = "<group>"; };
 		6AF95CFB1F4BC28B00429692 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
 		6AF95CFC1F4BC28B00429692 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
+		6FFC58823BB84A7604CF2A16 /* Pods_LandlordTenant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LandlordTenant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +80,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F334DB2ED6262E1A355CA5 /* Pods_LandlordTenant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BF060AABF6BBAB2D489B005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FFC58823BB84A7604CF2A16 /* Pods_LandlordTenant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63FF948384A5FF2C0019EF66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +130,7 @@
 				68473F001F4B82DC00AA3C22 /* LandlordTenant */,
 				68473EFF1F4B82DC00AA3C22 /* Products */,
 				63FF948384A5FF2C0019EF66 /* Pods */,
+				3BF060AABF6BBAB2D489B005 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
