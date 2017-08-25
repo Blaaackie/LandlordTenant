@@ -10,8 +10,6 @@
 #import "TenantComplaintPF.h"
 
 @interface UnitDetailViewController : UIViewController
-@property (nonatomic, strong) TenantComplaintPF *compaint;
-
-@property ComplaintType complaintType;
+@property (nonatomic, strong) TenantComplaintPF *complaint;
 
 @end

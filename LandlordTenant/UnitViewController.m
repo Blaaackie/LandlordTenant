@@ -26,8 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    self.title = [NSString stringWithFormat:@"%@", self.unit]; // For Header of Unit Table View
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -40,16 +38,15 @@
             NSLog(@"%@", error);
             return;
         }
-        self.complaints = objects;
+        
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+        NSArray *sortDescriptorArray = [NSArray arrayWithObject:sortDescriptor];
+        
+        self.complaints = [objects sortedArrayUsingDescriptors:sortDescriptorArray];
         
         [self.unitTableView reloadData];
         
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Unit's Data Source
@@ -66,33 +63,24 @@
     self.post = self.complaints[indexPath.row];
     cell.unitLabel.text = self.post.complaintDescription;
     
-    if (self.post.type == 1) {
-        cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
-    } else if (self.post.type == 2) {
-        cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
-    } else if (self.post.type == 3) {
-        cell.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *dateString = [dateFormatter stringFromDate:self.post.date];
+    cell.comlaintDescriptionLabel.text = self.post.complaintDescription;
+    cell.timeStampLabel.text = dateString;
+    
+    if (self.post.type == general) {
+        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];
+        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewGeneral"];
+    } else if (self.post.type == maintenance) {
+        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
+        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewWrench (1)"];
+    } else if (self.post.type == noise) {
+        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
+        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewSound"];
     }
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Calls the last object in array and display corresponding color
-    
-//    if (self.post.type == 1)
-//    {
-//        cell.backgroundColor = [UIColor blueColor];
-//    }
-//    else if (self.post.type == 2)
-//    {
-//        cell.backgroundColor = [UIColor redColor];
-//    }
-//    else if (self.post.type == 3)
-//    {
-//        cell.backgroundColor = [UIColor whiteColor];
-//    }
 }
 
 #pragma mark - Unit View Controller Delegate Methods
@@ -103,18 +91,15 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForSelectedRow];
     if ([segue.identifier isEqualToString:@"toUnitDetailView"])
     {
-//        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.row];
         UnitTableViewCell *cell = (UnitTableViewCell *)sender;
         NSIndexPath *selectedIndexPath = [self.unitTableView indexPathForCell:cell];
         
-        Unit *unit = [self.complaints objectAtIndex:selectedIndexPath.item];
+        TenantComplaintPF *complaint = [self.complaints objectAtIndex:selectedIndexPath.item];
         UnitDetailViewController *detailVC = [segue destinationViewController];
-        detailVC.complaintType = unit;
+        detailVC.complaint = complaint;
     }
-    // destinationViewController from landlord's unit complaint
 }
 
 - (void)setLabelWithText:(NSString *)textLabel

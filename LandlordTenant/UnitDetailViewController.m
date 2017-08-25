@@ -10,7 +10,6 @@
 
 @interface UnitDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *unitDetailCellImage;
-@property (weak, nonatomic) IBOutlet UILabel *unitComplaintTypeLabel;
 @property (weak, nonatomic) IBOutlet UITextView *unitComplaintDescriptionView;
 
 @end
@@ -26,14 +25,14 @@
 
 - (void)configureView
 {
-    if (self.complaintType == general){
-        self.unitComplaintTypeLabel.text = @"General";
-    }else if (self.complaintType == maintenance){
-        self.unitComplaintTypeLabel.text = @"Maintenance";
-        self.unitDetailCellImage.image = [UIImage imageNamed:@"Wrench-large.jpg"];
-    }else if(self.complaintType == noise){
-        self.unitComplaintTypeLabel.text = @"Noise";
+    if (self.complaint.type == general){
+         self.unitDetailCellImage.image = [UIImage imageNamed:@"NewGeneral"];
+    }else if (self.complaint.type == maintenance){
+        self.unitDetailCellImage.image = [UIImage imageNamed:@"NewWrench (1)"];
+    }else if(self.complaint.type == noise){
+         self.unitDetailCellImage.image = [UIImage imageNamed:@"NewSound"];
     }
+    self.unitComplaintDescriptionView.text = [NSString stringWithFormat:@"%@", self.complaint.complaintDescription];
 }
 
 - (void)didReceiveMemoryWarning {
