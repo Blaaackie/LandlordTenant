@@ -17,6 +17,10 @@
 @property (nonatomic, strong) NSString *tenantName;
 @property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaintsList;
 @property (nonatomic, strong) TenantComplaintPF *lastPost;
+@property (weak, nonatomic) IBOutlet UIImageView *complaintTypeImageView;
+@property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
+@property (weak, nonatomic) IBOutlet UILabel *comlaintDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *complaintColourImageView;
 
 - (void)configureCellWithUnit:(Unit *)unit withTenant:(Tenant *) tenant;
 
