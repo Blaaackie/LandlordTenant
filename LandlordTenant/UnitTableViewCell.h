@@ -22,6 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *comlaintDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *complaintColourImageView;
 
-- (void)configureCellWithUnit:(Unit *)unit withTenant:(Tenant *) tenant;
+- (void)configureCellWithUnit:(Unit *)unit;
 
 @end

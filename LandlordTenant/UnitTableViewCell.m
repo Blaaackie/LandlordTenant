@@ -21,9 +21,9 @@
     // Configure the view for the selected state
 }
 
-- (void)configureCellWithUnit:(Unit *)unit withTenant:(Tenant *) tenant
+- (void)configureCellWithUnit:(Unit *)unit
 {
-    self.tenantName = tenant.name;
+    self.tenantName = unit.tenant;
     if (unit.isVacant)
     {
         NSString *vacantUnit = [NSString stringWithFormat:@"Unit %d - Vacant", unit.unitNumber];
