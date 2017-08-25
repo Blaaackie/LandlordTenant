@@ -21,6 +21,7 @@
 @property (nonatomic, strong) TenantComplaintPF *post;
 @property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaints;
 @property (nonatomic, assign) id colorIndicator;
+@property (weak, nonatomic) IBOutlet UIImageView *landLordLogoImageView;
 
 @end
 
@@ -29,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self propertySetup];
+    
+    self.landLordLogoImageView.image = [UIImage imageNamed:@"LandlordLogo"];
 }
 
 -(void)viewDidAppear:(BOOL)animated
