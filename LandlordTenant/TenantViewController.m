@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *unitNumberLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *addRequestButton;
+@property (weak, nonatomic) IBOutlet UIImageView *tenantLogoImageView;
 
 
 @end
@@ -32,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tenantLogoImageView.image = [UIImage imageNamed:@"TenantLogo"];
     
   Tenant *tenant = [[Tenant alloc] initWithName:@"Tye Blackie"
                                     phoneNumber:@"403.680.9430"
