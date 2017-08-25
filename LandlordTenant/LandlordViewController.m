@@ -30,11 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self propertySetup];
+    
     self.landLordLogoImageView.image = [UIImage imageNamed:@"LandlordLogo"];
-    
-
-
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -50,8 +47,7 @@
 
     self.landlordNameLabel.text = [NSString stringWithFormat:@"%@", landlord.landlordName];
     
-    [self unitInformation];
-    
+    [self unitInformation];    
 }
 
 - (void)unitInformation
@@ -119,8 +115,6 @@
         TenantComplaintPF *lastComplaintObject = (TenantComplaintPF *)[[objects sortedArrayUsingDescriptors:sortDescriptorArray] firstObject];
         int colorIndicator = lastComplaintObject.type;// [(NSNumber *)[lastComplaintObject objectForKey:@"type"] intValue];
         
-        NSLog(@"color indicator %d", colorIndicator);
-        
         if([((UnitTableViewCell*)cell).tenantName isEqualToString:@"Tye Blackie"]) {
             if (colorIndicator == 1) {
                 cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
@@ -130,7 +124,7 @@
                 cell.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];;
             }
         }
-        
+        [self.landlordTableView reloadData];
     }];
     // Calls the last object in array and display corresponding color
 

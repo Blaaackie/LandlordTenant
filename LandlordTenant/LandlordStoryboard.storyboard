@@ -165,13 +165,25 @@
                                     <outlet property="delegate" destination="vmh-tb-OKH" id="JMW-fr-LD7"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8o-0k-Zoh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshButton:" destination="vmh-tb-OKH" eventType="touchUpInside" id="maJ-lb-olU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2327220887" green="0.52634954450000004" blue="0.67459607119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="U8C-jQ-Fze" secondAttribute="trailing" constant="16" id="6ID-Ia-YuQ"/>
+                            <constraint firstItem="U8o-0k-Zoh" firstAttribute="leading" secondItem="6hz-QV-BGC" secondAttribute="leading" id="6TL-cU-OWr"/>
                             <constraint firstItem="U8C-jQ-Fze" firstAttribute="top" secondItem="z4P-jG-vKS" secondAttribute="bottom" constant="38" id="Jl1-zm-MgC"/>
+                            <constraint firstAttribute="trailing" secondItem="U8o-0k-Zoh" secondAttribute="trailing" id="Ueh-zv-vMY"/>
                             <constraint firstItem="U8C-jQ-Fze" firstAttribute="leading" secondItem="6hz-QV-BGC" secondAttribute="leading" constant="16" id="ZIK-Fq-jWu"/>
                             <constraint firstItem="S1g-s0-zBc" firstAttribute="top" secondItem="U8C-jQ-Fze" secondAttribute="bottom" constant="20" id="odB-e5-r6i"/>
+                            <constraint firstItem="U8o-0k-Zoh" firstAttribute="top" secondItem="z4P-jG-vKS" secondAttribute="bottom" id="wVG-yt-Sls"/>
                         </constraints>
                     </view>
                     <connections>
