@@ -35,7 +35,7 @@
     
     self.tenantLogoImageView.image = [UIImage imageNamed:@"TenantLogo"];
     
-  Tenant *tenant = [[Tenant alloc] initWithName:@"Tye Blackie"
+    Tenant *tenant = [[Tenant alloc] initWithName:@"Tye Blackie"
                                     phoneNumber:@"403.680.9430"
                                      unitNumber:@"Unit 205"];
     

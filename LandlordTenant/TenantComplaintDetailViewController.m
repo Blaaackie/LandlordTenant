@@ -23,13 +23,13 @@
     
     self.complaintDetails.delegate = self;
     
-    if (self.complaintType == general){
+    if (self.complaintType == general) {
         self.testLabel.text = @"General";
         self.complaintTypeImage.image = [UIImage imageNamed:@"NewGeneral"];
-    }else if (self.complaintType == maintenance){
+    } else if (self.complaintType == maintenance) {
         self.testLabel.text = @"Maintenance";
         self.complaintTypeImage.image = [UIImage imageNamed:@"NewWrench (1)"];
-    }else if(self.complaintType == noise){
+    } else if (self.complaintType == noise) {
         self.testLabel.text = @"Noise";
         self.complaintTypeImage.image = [UIImage imageNamed:@"NewSound"];
     }
@@ -59,8 +59,7 @@
     }];
     
 //    TenantComplaintPF *complaint = [[TenantComplaintPF alloc] initWithType:self.complaintType date:date description:self.complaintDetails.text];
-    
-    
+
 }
 
 - (IBAction)cancelButton:(id)sender {

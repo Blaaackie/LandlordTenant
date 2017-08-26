@@ -20,10 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // App ID 1166alberni
+    // App ID 1166alberni -> lltenantAppId
     // Master Key: myMasterKey
     // https://landlord-tenant.herokuapp.com/parse
     
+    
+    // Setup for the parse server
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
         configuration.applicationId = @"lltenantAppId";
         configuration.server = @"https://landlordtenant.herokuapp.com/parse";
@@ -37,7 +39,7 @@
 
 
 
-- (void)createTye
+- (void)createTye // Create Tye as the current user with all the data. Will add new users in to customize LL & Tenant info later
 {
     if ([PFUser currentUser]) {
         return;
