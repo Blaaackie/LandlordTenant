@@ -14,7 +14,7 @@
 
 @interface UnitViewController ()
 @property (nonatomic, strong) NSString *cellTextLabel;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *complaintLabel;
+//@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *complaintLabel;
 @property (weak, nonatomic) IBOutlet UITableView *unitTableView;
 @property (nonatomic, strong) NSArray <TenantComplaintPF *> *complaints;
 @property (nonatomic, strong) TenantComplaintPF *post;
@@ -28,7 +28,7 @@
     [super viewDidLoad];
 }
 
--(void)fetchData
+-(void)fetchData // Fetch Parse data for second  -- Only 1 user to call data from at the moment
 {
     PFQuery *query = [TenantComplaintPF query];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -74,16 +74,40 @@
     cell.comlaintDescriptionLabel.text = self.post.complaintDescription;
     cell.timeStampLabel.text = dateString;
     
-    if (self.post.type == general) {
-        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];
-        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewGeneral"];
-    } else if (self.post.type == maintenance) {
-        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
-        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewWrench (1)"];
-    } else if (self.post.type == noise) {
-        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
-        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewSound"];
+    switch (self.post.type)
+    {
+        case general:
+        {
+            cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];
+            cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewGeneral"];
+            break;
+        }
+        case maintenance:
+        {
+            cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
+            cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewWrench (1)"];
+            break;
+        }
+        case noise:
+        {
+            cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
+            cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewSound"];
+            break;
+        }
+        default:
+            break;
     }
+    
+//    if (self.post.type == general) {
+//        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(228/255.0) blue:(233/255.0) alpha:1];
+//        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewGeneral"];
+//    } else if (self.post.type == maintenance) {
+//        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
+//        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewWrench (1)"];
+//    } else if (self.post.type == noise) {
+//        cell.complaintColourImageView.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(232/255.0) blue:(182/255.0) alpha:1];
+//        cell.complaintTypeImageView.image = [UIImage imageNamed:@"NewSound"];
+//    }
     
     return cell;
 }

@@ -21,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Based on the button previously pressed in the previous viewcontroller, will display the corresponding image and request type in this view
+    
     self.complaintDetails.delegate = self;
     
     if (self.complaintType == general) {
@@ -64,8 +66,7 @@
 
 - (IBAction)cancelButton:(id)sender {
     
-      [self dismissViewControllerAnimated:YES completion:nil];
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
