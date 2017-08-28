@@ -43,6 +43,8 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
+    // Fetch Parse data -- Only 1 user to call data from at the moment
+    
     PFQuery *query = [TenantComplaintPF query];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (error) {
@@ -50,6 +52,7 @@
             return;
         }
         
+        // Sort the requests in order of most recent request at the top
         NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
         NSArray *sortDescriptorArray = [NSArray arrayWithObject:sortDescriptor];
         
@@ -68,6 +71,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
+    // Based on the button selected in the request screen, will show that icon and type of complaint in the details screen
     TenantComplaintDetailViewController *vc = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"maintenanceButtonSegue"]) {
         
@@ -102,9 +106,9 @@
     
     if (myComplaint.type == general) {
         complaintCell.complaintTypeImageView.image = [UIImage imageNamed:@"NewGeneral"];
-    }else if (myComplaint.type == maintenance) {
+    } else if (myComplaint.type == maintenance) {
         complaintCell.complaintTypeImageView.image = [UIImage imageNamed:@"NewWrench (1)"];
-    }else if (myComplaint.type == noise) {
+    } else if (myComplaint.type == noise) {
         complaintCell.complaintTypeImageView.image = [UIImage imageNamed:@"NewSound"];
     }
     return complaintCell;

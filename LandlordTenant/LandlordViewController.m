@@ -52,9 +52,9 @@
 
 - (void)unitInformation
 {
-    Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 withTenant:@"Vacant" isVacant:YES];// andColor:1];
-    Unit *unit205 = [[Unit alloc] initWithUnitNumber:205 withTenant:@"Tye Blackie" isVacant:NO];// andColor:2];
-    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 withTenant:@"Linh Tu" isVacant:NO];// andColor:1];
+    Unit *unit201 = [[Unit alloc] initWithUnitNumber:201 withTenant:@"Vacant" isVacant:YES];
+    Unit *unit205 = [[Unit alloc] initWithUnitNumber:205 withTenant:@"Tye Blackie" isVacant:NO];
+    Unit *unit1805 = [[Unit alloc] initWithUnitNumber:1805 withTenant:@"Linh Tu" isVacant:NO];
     
     Building *building1 = [[Building alloc] initWithName:@"Lighthouse Labs - 128 W Hastings St" withUnits:@[unit201, unit205]];
     Building *building2 = [[Building alloc] initWithName:@"Harbour Centre - 555 W Hastings St" withUnits:@[unit1805]];
@@ -86,6 +86,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // LandlordViewController accesses UnitViewController's tableview's cell
     UnitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UnitCell" forIndexPath:indexPath];
     
     Building *building = self.buildings[indexPath.section];
@@ -103,19 +104,26 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"toUnitTableView" sender:[self.landlordTableView cellForRowAtIndexPath:indexPath]];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    // Fetch Parse data -- Only 1 user to call data from at the moment
     PFQuery *query = [TenantComplaintPF query];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        // Calls the last object in array, rearrange to place last item on top and send corresponding color to to cells
         NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
         NSArray *sortDescriptorArray = [NSArray arrayWithObject:sortDescriptor];
         TenantComplaintPF *lastComplaintObject = (TenantComplaintPF *)[[objects sortedArrayUsingDescriptors:sortDescriptorArray] firstObject];
         int colorIndicator = lastComplaintObject.type;// [(NSNumber *)[lastComplaintObject objectForKey:@"type"] intValue];
         
-        if([((UnitTableViewCell*)cell).tenantName isEqualToString:@"Tye Blackie"]) {
+        // Hacky way of highlighting tenant's (Tye's) cell who's making a request (for demonstration purposes only)
+        // On full completion will be able to have each tenant highlight a different color based on that Tenant's complaint i.e. Tye has a noise complaint and Linh has a general note and each cell will be a different color on the LL's main view.
+        if ([((UnitTableViewCell*)cell).tenantName isEqualToString:@"Tye Blackie"]) {
             if (colorIndicator == 1) {
                 cell.backgroundColor = [UIColor colorWithRed:(255/255.0) green:(177/255.0) blue:(187/255.0) alpha:1];
             } else if (colorIndicator == 2) {
@@ -126,8 +134,6 @@
         }
         [self.landlordTableView reloadData];
     }];
-    // Calls the last object in array and display corresponding color
-
 }
 
 #pragma mark - Navigation

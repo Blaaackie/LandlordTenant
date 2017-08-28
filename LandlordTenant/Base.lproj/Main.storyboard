@@ -150,7 +150,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="StV-Lw-Ggo" id="1nX-tx-4XG">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="80.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NOZ-wd-K9Z">
@@ -215,6 +215,7 @@
                                 <color key="backgroundColor" red="0.90572632140559628" green="0.95404478186836694" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="dSX-db-Ov3"/>
+                                    <constraint firstAttribute="width" constant="80" id="vpZ-R5-piP"/>
                                 </constraints>
                                 <state key="normal" title="Noise" image="NewSound"/>
                                 <connections>
@@ -237,7 +238,6 @@
                             <constraint firstItem="6wQ-bt-0PE" firstAttribute="top" secondItem="Zrc-iF-gUk" secondAttribute="bottom" constant="8" symbolic="YES" id="ETf-KH-V8C"/>
                             <constraint firstItem="6wQ-bt-0PE" firstAttribute="trailing" secondItem="4gm-pS-sZb" secondAttribute="trailingMargin" id="Kvz-jl-Q7w"/>
                             <constraint firstItem="nCR-SC-xVW" firstAttribute="top" secondItem="50g-mj-rJS" secondAttribute="bottom" constant="32" id="P8N-qQ-vfB"/>
-                            <constraint firstItem="50g-mj-rJS" firstAttribute="top" secondItem="6wQ-bt-0PE" secondAttribute="bottom" constant="27" id="PhB-cb-gbo"/>
                             <constraint firstItem="nCR-SC-xVW" firstAttribute="top" secondItem="VG6-Qh-YeS" secondAttribute="bottom" constant="32" id="Usw-ON-OTU"/>
                             <constraint firstItem="VG6-Qh-YeS" firstAttribute="leading" secondItem="50g-mj-rJS" secondAttribute="trailing" constant="67" id="XvZ-Zx-VKG"/>
                             <constraint firstItem="6wQ-bt-0PE" firstAttribute="leading" secondItem="4gm-pS-sZb" secondAttribute="leadingMargin" id="byz-bX-PJo"/>

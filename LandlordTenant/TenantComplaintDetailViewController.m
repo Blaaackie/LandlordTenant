@@ -21,15 +21,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Based on the button previously pressed in the previous viewcontroller, will display the corresponding image and request type in this view
+    
     self.complaintDetails.delegate = self;
     
-    if (self.complaintType == general){
+    if (self.complaintType == general) {
         self.testLabel.text = @"General";
         self.complaintTypeImage.image = [UIImage imageNamed:@"NewGeneral"];
-    }else if (self.complaintType == maintenance){
+    } else if (self.complaintType == maintenance) {
         self.testLabel.text = @"Maintenance";
         self.complaintTypeImage.image = [UIImage imageNamed:@"NewWrench (1)"];
-    }else if(self.complaintType == noise){
+    } else if (self.complaintType == noise) {
         self.testLabel.text = @"Noise";
         self.complaintTypeImage.image = [UIImage imageNamed:@"NewSound"];
     }
@@ -58,15 +60,11 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-//    TenantComplaintPF *complaint = [[TenantComplaintPF alloc] initWithType:self.complaintType date:date description:self.complaintDetails.text];
-    
-    
 }
 
 - (IBAction)cancelButton:(id)sender {
     
-      [self dismissViewControllerAnimated:YES completion:nil];
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -84,26 +82,6 @@
     if ([self.complaintDetails.text isEqualToString:@"Complaint Details Here"]) {
          self.complaintDetails.text = nil;
     }
-}
-
-
-//- (void)textFieldDidBeginEditing:(UITextField *)textField {
-//    self.complaintDetails.text = nil;
-//}
-//
-//- (void)textFieldDidEndEditing:(UITextField *)textField {
-//    self.complaintDetails.text = @"Enter Message Details Here.";
-//}
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
-    
-    
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 
