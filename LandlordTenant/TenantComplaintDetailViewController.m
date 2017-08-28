@@ -60,8 +60,6 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-//    TenantComplaintPF *complaint = [[TenantComplaintPF alloc] initWithType:self.complaintType date:date description:self.complaintDetails.text];
-
 }
 
 - (IBAction)cancelButton:(id)sender {
@@ -84,26 +82,6 @@
     if ([self.complaintDetails.text isEqualToString:@"Complaint Details Here"]) {
          self.complaintDetails.text = nil;
     }
-}
-
-
-//- (void)textFieldDidBeginEditing:(UITextField *)textField {
-//    self.complaintDetails.text = nil;
-//}
-//
-//- (void)textFieldDidEndEditing:(UITextField *)textField {
-//    self.complaintDetails.text = @"Enter Message Details Here.";
-//}
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
-    
-    
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 
